@@ -7,5 +7,15 @@
 
 import Foundation
 
-print("Hello, World!")
+print("having trouble with an ENGGEN 121 problem? so was i. select which type of problem youre having from:")
+print("1. Moments")
 
+print("choice: ", terminator: "")
+let choice = Int(readLine() ?? "-1")
+
+switch choice {
+case 1:
+    momentSolver()
+default:
+    print("enter a valid selection")
+}

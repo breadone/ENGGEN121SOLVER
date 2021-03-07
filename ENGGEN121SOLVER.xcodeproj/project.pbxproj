@@ -29,6 +29,8 @@
 		4630F32025F58E5B000F4FC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4630F32825F58E74000F4FC0 /* momentSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momentSolver.swift; sourceTree = "<group>"; };
 		4630F32D25F58EA0000F4FC0 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
+		4651D66A25F59BC0004B7D94 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		4651D66C25F59BF3004B7D94 /* common.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = common.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,8 @@
 		469B7B7125F593DE005C229B /* python */ = {
 			isa = PBXGroup;
 			children = (
+				4651D66A25F59BC0004B7D94 /* main.py */,
+				4651D66C25F59BF3004B7D94 /* common.py */,
 				469B7B7225F5940D005C229B /* Statics */,
 			);
 			path = python;

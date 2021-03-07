@@ -49,6 +49,7 @@ class Force {
 }
 
 public func momentSolver() {
+    print("Moment Solver")
     var Forces = [Force]() //creates empty array of forces
 
     while true { //input force(s)
