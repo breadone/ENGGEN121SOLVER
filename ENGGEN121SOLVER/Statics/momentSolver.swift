@@ -3,7 +3,7 @@
 //  momentSolver
 //
 //  Created by Pradyun Setti on 5/03/21.
-//
+//  https://github.com/breadone/ENGGEN121SOLVER
 
 import Foundation
 
