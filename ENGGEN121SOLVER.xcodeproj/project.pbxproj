@@ -45,7 +45,8 @@
 		4630F31425F58E5B000F4FC0 = {
 			isa = PBXGroup;
 			children = (
-				4630F31F25F58E5B000F4FC0 /* ENGGEN121SOLVER */,
+				4630F31F25F58E5B000F4FC0 /* swift */,
+				469B7B7125F593DE005C229B /* python */,
 				4630F31E25F58E5B000F4FC0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,20 +59,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4630F31F25F58E5B000F4FC0 /* ENGGEN121SOLVER */ = {
+		4630F31F25F58E5B000F4FC0 /* swift */ = {
 			isa = PBXGroup;
 			children = (
 				4630F32025F58E5B000F4FC0 /* main.swift */,
 				4630F32D25F58EA0000F4FC0 /* common.swift */,
 				4630F32B25F58E87000F4FC0 /* Statics */,
 			);
-			path = ENGGEN121SOLVER;
+			path = swift;
 			sourceTree = "<group>";
 		};
 		4630F32B25F58E87000F4FC0 /* Statics */ = {
 			isa = PBXGroup;
 			children = (
 				4630F32825F58E74000F4FC0 /* momentSolver.swift */,
+			);
+			path = Statics;
+			sourceTree = "<group>";
+		};
+		469B7B7125F593DE005C229B /* python */ = {
+			isa = PBXGroup;
+			children = (
+				469B7B7225F5940D005C229B /* Statics */,
+			);
+			path = python;
+			sourceTree = "<group>";
+		};
+		469B7B7225F5940D005C229B /* Statics */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Statics;
 			sourceTree = "<group>";
