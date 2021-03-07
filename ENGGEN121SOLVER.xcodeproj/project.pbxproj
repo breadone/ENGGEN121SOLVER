@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4630F32125F58E5B000F4FC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32025F58E5B000F4FC0 /* main.swift */; };
+		4630F32925F58E74000F4FC0 /* momentSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32825F58E74000F4FC0 /* momentSolver.swift */; };
+		4630F32E25F58EA0000F4FC0 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32D25F58EA0000F4FC0 /* common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		4630F31D25F58E5B000F4FC0 /* ENGGEN121SOLVER */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ENGGEN121SOLVER; sourceTree = BUILT_PRODUCTS_DIR; };
 		4630F32025F58E5B000F4FC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4630F32825F58E74000F4FC0 /* momentSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momentSolver.swift; sourceTree = "<group>"; };
+		4630F32D25F58EA0000F4FC0 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,18 @@
 			isa = PBXGroup;
 			children = (
 				4630F32025F58E5B000F4FC0 /* main.swift */,
+				4630F32D25F58EA0000F4FC0 /* common.swift */,
+				4630F32B25F58E87000F4FC0 /* Statics */,
 			);
 			path = ENGGEN121SOLVER;
+			sourceTree = "<group>";
+		};
+		4630F32B25F58E87000F4FC0 /* Statics */ = {
+			isa = PBXGroup;
+			children = (
+				4630F32825F58E74000F4FC0 /* momentSolver.swift */,
+			);
+			path = Statics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4630F32925F58E74000F4FC0 /* momentSolver.swift in Sources */,
 				4630F32125F58E5B000F4FC0 /* main.swift in Sources */,
+				4630F32E25F58EA0000F4FC0 /* common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
