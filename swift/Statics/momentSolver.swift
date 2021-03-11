@@ -82,7 +82,7 @@ public func momentSolver() {
     }
 
     print("------------")
-    print("∑X: \(sumX.roundToPlaces(toPlaces: precision)))")
+    print("∑X: \(sumX.roundToPlaces(toPlaces: precision))")
     print("∑Y: \(sumY.roundToPlaces(toPlaces: precision))")
     print("Total: \((sumX+sumY).roundToPlaces(toPlaces: precision))")
     print("------------")
