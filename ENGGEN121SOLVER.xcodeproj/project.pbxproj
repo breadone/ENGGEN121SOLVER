@@ -30,8 +30,6 @@
 		4630F32025F58E5B000F4FC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4630F32825F58E74000F4FC0 /* momentSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momentSolver.swift; sourceTree = "<group>"; };
 		4630F32D25F58EA0000F4FC0 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
-		4651D66A25F59BC0004B7D94 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
-		4651D66C25F59BF3004B7D94 /* common.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = common.py; sourceTree = "<group>"; };
 		466931D525FA38E1000AB9F4 /* centroidSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centroidSolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,8 +47,7 @@
 		4630F31425F58E5B000F4FC0 = {
 			isa = PBXGroup;
 			children = (
-				4630F31F25F58E5B000F4FC0 /* swift */,
-				469B7B7125F593DE005C229B /* python */,
+				4630F31F25F58E5B000F4FC0 /* src */,
 				4630F31E25F58E5B000F4FC0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,14 +60,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4630F31F25F58E5B000F4FC0 /* swift */ = {
+		4630F31F25F58E5B000F4FC0 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				4630F32025F58E5B000F4FC0 /* main.swift */,
 				4630F32D25F58EA0000F4FC0 /* common.swift */,
 				4630F32B25F58E87000F4FC0 /* Statics */,
 			);
-			path = swift;
+			path = src;
 			sourceTree = "<group>";
 		};
 		4630F32B25F58E87000F4FC0 /* Statics */ = {
@@ -78,23 +75,6 @@
 			children = (
 				4630F32825F58E74000F4FC0 /* momentSolver.swift */,
 				466931D525FA38E1000AB9F4 /* centroidSolver.swift */,
-			);
-			path = Statics;
-			sourceTree = "<group>";
-		};
-		469B7B7125F593DE005C229B /* python */ = {
-			isa = PBXGroup;
-			children = (
-				4651D66A25F59BC0004B7D94 /* main.py */,
-				4651D66C25F59BF3004B7D94 /* common.py */,
-				469B7B7225F5940D005C229B /* Statics */,
-			);
-			path = python;
-			sourceTree = "<group>";
-		};
-		469B7B7225F5940D005C229B /* Statics */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Statics;
 			sourceTree = "<group>";
