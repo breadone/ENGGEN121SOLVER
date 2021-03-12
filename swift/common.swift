@@ -34,11 +34,3 @@ func input(_ question: String) -> String {
     print(question, terminator: "")
     return readLine() ?? ""
 }
-
-func sum(_ array: [Double]) -> Double {
-    var count: Double = 0
-    for i in 0...array.count {
-        count += array[i]
-    }
-    return count
-}

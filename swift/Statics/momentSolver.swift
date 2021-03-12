@@ -53,22 +53,12 @@ public func momentSolver() {
     var Forces = [Force]() //creates empty array of forces
     print("This solver uses the 'force compenents * orthogonal distance method', so you need to find for each force: the x and y distances from the pivot, and its angle from the positive X axis")
     
-    print("how many forces are there: ", terminator: "")
-    let forceCount: Int = Int(readLine() ?? "0")!
-
+    let forceCount: Int = Int(input("how many forces are there: "))!
     for i in 1...forceCount {
-        print("Enter force \(i)'s magnitude: ", terminator: "")
-        let newMag = Double(readLine() ?? "0")!
-        
-        print("Enter force \(i)'s angle, in degrees, from posX axis: ", terminator: "")
-        let newAngle = Double(readLine() ?? "0")!
-        
-        print("Enter force \(i)'s x distance from the pivot (L: -ve, R: +ve): ", terminator: "")
-        let newxDist = Double(readLine() ?? "0")!
-        
-        print("Enter force \(i)'s y distance from the pivot (U: +ve, D: -ve): ", terminator: "")
-        let newyDist = Double(readLine() ?? "0")!
-        
+        let newMag = Double(input("Enter force \(i)'s magnitude: "))!
+        let newAngle = Double(input("Enter force \(i)'s angle, in degrees, from posX axis: "))!
+        let newxDist = Double(input("Enter force \(i)'s x distance from the pivot (L: -ve, R: +ve): "))!
+        let newyDist = Double(input("Enter force \(i)'s y distance from the pivot (U: +ve, D: -ve): "))!
         Forces.append(Force(mag: newMag, angle: newAngle, xDist: newxDist, yDist: newyDist))
     }
     

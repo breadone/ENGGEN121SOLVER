@@ -26,11 +26,11 @@ func centroidSolver() {
     print("Centroid Solver")
     print("This solver uses the 'find big shape then subtract subshapes' method, so find the area of the total big shape, area of all subshapes, and their distances from your reference point. ", terminator: "\n\n")
     
-    let subShapeCount: Int = Int(input("how many subshapes: "))!
-    let mainShapeArea = Double(input("enter area of main shape: "))!
+    let subShapeCount: Int = Int(input("how many subshapes to subtract: "))!
+    
+    let mainShapeArea = Double(input("enter area of main shape to subtract from: "))!
     let mainShapeXDist = Double(input("enter x distance from reference point to centre of shape: "))!
     let mainShapeYDist = Double(input("enter y distance from reference point to centre of shape: "))!
-    
     let mainShape = Shape(area: mainShapeArea, xDist: mainShapeXDist, yDist: mainShapeYDist)
     
     for _ in 0...subShapeCount - 1 {
@@ -46,16 +46,12 @@ func centroidSolver() {
 
     for i in 0...shapeArray.count - 1 {
         mainArea -= shapeArray[i].area
-        xTemp -= shapeArray[i].xCent
-        yTemp -= shapeArray[i].yCent
+        xTemp += shapeArray[i].xCent
+        yTemp += shapeArray[i].yCent
     }
     
-    let xCoord = (xTemp / mainArea).roundToPlaces(toPlaces: precision)
-    let yCoord = (yTemp / mainArea).roundToPlaces(toPlaces: precision)
-    let output = "(\(xCoord), \(yCoord))"
+    let xCoord = ((mainShape.xCent - xTemp) / mainArea).roundToPlaces(toPlaces: precision)
+    let yCoord = ((mainShape.yCent - yTemp) / mainArea).roundToPlaces(toPlaces: precision)
     
-    answerOut(output)
-    
+    answerOut("(\(xCoord), \(yCoord))")
 }
-
-
