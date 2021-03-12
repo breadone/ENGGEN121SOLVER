@@ -51,8 +51,9 @@ class Force {
 public func momentSolver() {
     print("Moment Solver")
     var Forces = [Force]() //creates empty array of forces
+    print("This solver uses the 'force compenents * orthogonal distance method', so you need to find for each force: the x and y distances from the pivot, and its angle from the positive X axis")
     
-    print("how many forces are there: ")
+    print("how many forces are there: ", terminator: "")
     let forceCount: Int = Int(readLine() ?? "0")!
 
     for i in 1...forceCount {

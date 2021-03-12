@@ -24,3 +24,8 @@ extension Double {
     }
 } //source: https://stackoverflow.com/questions/27338573/rounding-a-double-value-to-x-number-of-decimal-places-in-swift
 
+func answerOut(_ output: String) {
+    print("------------")
+    print(output)
+    print("------------")
+}
