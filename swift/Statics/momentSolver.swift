@@ -51,26 +51,25 @@ class Force {
 public func momentSolver() {
     print("Moment Solver")
     var Forces = [Force]() //creates empty array of forces
+    
+    print("how many forces are there: ")
+    let forceCount: Int = Int(readLine() ?? "0")!
 
-    while true { //input force(s)
-        print("Enter the new Force's magnitude: ", terminator: "")
+    for i in 1...forceCount {
+        print("Enter force \(i)'s magnitude: ", terminator: "")
         let newMag = Double(readLine() ?? "0")!
         
-        print("Enter the new Force's angle, in degrees, from posX axis: ", terminator: "")
+        print("Enter force \(i)'s angle, in degrees, from posX axis: ", terminator: "")
         let newAngle = Double(readLine() ?? "0")!
         
-        print("Enter the new Force's x distance from the pivot (L: -ve, R: +ve): ", terminator: "")
+        print("Enter force \(i)'s x distance from the pivot (L: -ve, R: +ve): ", terminator: "")
         let newxDist = Double(readLine() ?? "0")!
         
-        print("Enter the new Force's y distance from the pivot (U: +ve, D: -ve): ", terminator: "")
+        print("Enter force \(i)'s y distance from the pivot (U: +ve, D: -ve): ", terminator: "")
         let newyDist = Double(readLine() ?? "0")!
         
         Forces.append(Force(mag: newMag, angle: newAngle, xDist: newxDist, yDist: newyDist))
-            
-        print("Add another Force? (y/n): ", terminator: "")
-        if readLine() == "n" {
-            break
-        }
+        print("") //visual break
     }
     //print(Forces[0].xForce, Forces[0].yForce)
     var sumX: Double = 0
