@@ -70,9 +70,8 @@ public func momentSolver() {
         let newyDist = Double(readLine() ?? "0")!
         
         Forces.append(Force(mag: newMag, angle: newAngle, xDist: newxDist, yDist: newyDist))
-        print("") //visual break
     }
-    //print(Forces[0].xForce, Forces[0].yForce)
+    
     var sumX: Double = 0
     var sumY: Double = 0
 
@@ -80,12 +79,14 @@ public func momentSolver() {
         sumX += (Forces[i].xForce * Forces[i].yDist)
         sumY += (Forces[i].yForce * Forces[i].xDist)
     }
-
-    print("------------")
-    print("∑X: \(sumX.roundToPlaces(toPlaces: precision))")
-    print("∑Y: \(sumY.roundToPlaces(toPlaces: precision))")
-    print("Total: \((sumX+sumY).roundToPlaces(toPlaces: precision))")
-    print("------------")
+    
+    let output: String = """
+        ∑X: \(sumX.roundToPlaces(toPlaces: precision))
+        ∑Y: \(sumY.roundToPlaces(toPlaces: precision))
+        Total: \((sumX+sumY).roundToPlaces(toPlaces: precision))
+    """
+    
+    answerOut(output)
 }
 
 
