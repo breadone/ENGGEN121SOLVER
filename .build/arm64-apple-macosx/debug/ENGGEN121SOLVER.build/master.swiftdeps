@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "0b52d126430ee31cfb39399cf7604419"
+build_time: [1615583576, 641954000]
+inputs:
+  "/Users/pradyun/Code/ENGGEN121SOLVER/Sources/ENGGEN121SOLVER/Statics/centroidSolver.swift": [1615531111, 340136969]
+  "/Users/pradyun/Code/ENGGEN121SOLVER/Sources/ENGGEN121SOLVER/Statics/momentSolver.swift": [1615529587, 698186846]
+  "/Users/pradyun/Code/ENGGEN121SOLVER/Sources/ENGGEN121SOLVER/common.swift": [1615529626, 724078084]
+  "/Users/pradyun/Code/ENGGEN121SOLVER/Sources/ENGGEN121SOLVER/main.swift": [1615526814, 598191785]

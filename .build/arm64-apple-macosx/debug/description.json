@@ -1,0 +1,19 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "\/Users\/pradyun\/Code\/ENGGEN121SOLVER\/.build\/arm64-apple-macosx\/debug\/ENGGEN121SOLVERPackageTests.xctest\/Contents\/MacOS\/ENGGEN121SOLVERPackageTests",
+      "packageName" : "ENGGEN121SOLVER",
+      "productName" : "ENGGEN121SOLVERPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "swiftTargetMap" : {
+    "C.ENGGEN121SOLVER-debug.module" : "ENGGEN121SOLVER",
+    "C.ENGGEN121SOLVERTests-debug.module" : "ENGGEN121SOLVERTests"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

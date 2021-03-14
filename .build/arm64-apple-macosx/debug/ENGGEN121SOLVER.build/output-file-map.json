@@ -1,0 +1,29 @@
+{
+  "": {
+    "swift-dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/master.swiftdeps"
+  },
+  "/Users/pradyun/Code/ENGGEN121SOLVER/Sources/ENGGEN121SOLVER/Statics/centroidSolver.swift": {
+    "dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/Statics/centroidSolver.d",
+    "object": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/Statics/centroidSolver.swift.o",
+    "swiftmodule": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/Statics/centroidSolver~partial.swiftmodule",
+    "swift-dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/Statics/centroidSolver.swiftdeps"
+  },
+  "/Users/pradyun/Code/ENGGEN121SOLVER/Sources/ENGGEN121SOLVER/Statics/momentSolver.swift": {
+    "dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/Statics/momentSolver.d",
+    "object": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/Statics/momentSolver.swift.o",
+    "swiftmodule": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/Statics/momentSolver~partial.swiftmodule",
+    "swift-dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/Statics/momentSolver.swiftdeps"
+  },
+  "/Users/pradyun/Code/ENGGEN121SOLVER/Sources/ENGGEN121SOLVER/common.swift": {
+    "dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/common.d",
+    "object": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/common.swift.o",
+    "swiftmodule": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/common~partial.swiftmodule",
+    "swift-dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/common.swiftdeps"
+  },
+  "/Users/pradyun/Code/ENGGEN121SOLVER/Sources/ENGGEN121SOLVER/main.swift": {
+    "dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/main.d",
+    "object": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/main.swift.o",
+    "swiftmodule": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/pradyun/Code/ENGGEN121SOLVER/.build/arm64-apple-macosx/debug/ENGGEN121SOLVER.build/main.swiftdeps"
+  }
+}

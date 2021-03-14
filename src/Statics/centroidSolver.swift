@@ -24,14 +24,9 @@ struct Shape {
 func centroidSolver() {
     var shapeArray = [Shape]()
     print("Centroid Solver")
-    print("This solver uses the 'find big shape then subtract subshapes' method, so find the area of the total big shape, area of all subshapes, and their distances from your reference point. ", terminator: "\n\n")
+    print("This solver uses the 'split into subshapes and add' method, so find the area of each shape, and their distances from your reference point.", terminator: "\n\n")
     
-    let subShapeCount: Int = Int(input("how many subshapes to subtract: "))!
-    
-    let mainShapeArea = Double(input("enter area of main shape to subtract from: "))!
-    let mainShapeXDist = Double(input("enter x distance from reference point to centre of shape: "))!
-    let mainShapeYDist = Double(input("enter y distance from reference point to centre of shape: "))!
-    let mainShape = Shape(area: mainShapeArea, xDist: mainShapeXDist, yDist: mainShapeYDist)
+    let subShapeCount: Int = Int(input("how many subshapes are there: "))!
     
     for _ in 0...subShapeCount - 1 {
         let newShapeArea = Double(input("enter area of new shape: "))!
@@ -40,18 +35,18 @@ func centroidSolver() {
         shapeArray.append(Shape(area: newShapeArea, xDist: newShapeXDist, yDist: newShapeYDist))
     }
     
-    var mainArea: Double = mainShape.area
-    var xTemp: Double = 0
-    var yTemp: Double = 0
+    var totalArea: Double = 0
+    var xSum: Double = 0
+    var ySum: Double = 0
 
     for i in 0...shapeArray.count - 1 {
-        mainArea -= shapeArray[i].area
-        xTemp += shapeArray[i].xCent
-        yTemp += shapeArray[i].yCent
+        totalArea += shapeArray[i].area
+        xSum += shapeArray[i].xCent
+        ySum += shapeArray[i].yCent
     }
     
-    let xCoord = ((mainShape.xCent - xTemp) / mainArea).roundToPlaces(toPlaces: precision)
-    let yCoord = ((mainShape.yCent - yTemp) / mainArea).roundToPlaces(toPlaces: precision)
+    let xCoord = (xSum / totalArea).roundToPlaces(toPlaces: precision)
+    let yCoord = (ySum / totalArea).roundToPlaces(toPlaces: precision)
     
     answerOut("(\(xCoord), \(yCoord))")
 }

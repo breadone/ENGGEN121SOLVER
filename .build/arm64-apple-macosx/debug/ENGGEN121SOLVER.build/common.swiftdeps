@@ -1,0 +1,249 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "precision"
+- "showComponents"
+- "\u03C0"
+- "answerOut"
+- "input"
+provides-nominal:
+provides-member:
+- ["Sd", ""]
+- ["Sd", "roundToPlaces"]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "*"
+- !private "/"
+- !private "??"
+- "Bool"
+- "BooleanLiteralType"
+- "Double"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "String"
+- !private "StringLiteralType"
+- "answerOut"
+- "input"
+- !private "pow"
+- "precision"
+- !private "print"
+- !private "readLine"
+- "showComponents"
+- "\u03C0"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "Double"]
+- ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- ["s18AdditiveArithmeticP", "pi"]
+- !private ["s18AdditiveArithmeticP", "pow"]
+- !private ["s18AdditiveArithmeticP", "rounded"]
+- !private ["SB", "Double"]
+- !private ["SB", "init"]
+- ["SB", "pi"]
+- !private ["SB", "pow"]
+- !private ["SB", "rounded"]
+- !private ["s7CVarArgP", "Double"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "pi"]
+- !private ["s7CVarArgP", "pow"]
+- !private ["s7CVarArgP", "rounded"]
+- !private ["SL", "Double"]
+- ["SL", ""]
+- !private ["SL", "init"]
+- ["SL", "pi"]
+- !private ["SL", "pow"]
+- !private ["SL", "rounded"]
+- !private ["s28CustomDebugStringConvertibleP", "Double"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "pi"]
+- !private ["s28CustomDebugStringConvertibleP", "pow"]
+- !private ["s28CustomDebugStringConvertibleP", "rounded"]
+- !private ["s17CustomReflectableP", "Double"]
+- !private ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "pi"]
+- !private ["s17CustomReflectableP", "pow"]
+- !private ["s17CustomReflectableP", "rounded"]
+- !private ["s23CustomStringConvertibleP", "Double"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "pi"]
+- !private ["s23CustomStringConvertibleP", "pow"]
+- !private ["s23CustomStringConvertibleP", "rounded"]
+- !private ["Se", "Double"]
+- !private ["Se", "init"]
+- ["Se", "pi"]
+- !private ["Se", "pow"]
+- !private ["Se", "rounded"]
+- ["Sd", "Double"]
+- ["Sd", "Int"]
+- ["Sd", ""]
+- !private ["Sd", "init"]
+- ["Sd", "pi"]
+- !private ["Sd", "pow"]
+- ["Sd", "roundToPlaces"]
+- !private ["Sd", "rounded"]
+- !private ["SE", "Double"]
+- !private ["SE", "init"]
+- ["SE", "pi"]
+- !private ["SE", "pow"]
+- !private ["SE", "rounded"]
+- !private ["SQ", "Double"]
+- ["SQ", ""]
+- !private ["SQ", "init"]
+- ["SQ", "pi"]
+- !private ["SQ", "pow"]
+- !private ["SQ", "rounded"]
+- !private ["s25ExpressibleByFloatLiteralP", "Double"]
+- ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- ["s25ExpressibleByFloatLiteralP", "pi"]
+- !private ["s25ExpressibleByFloatLiteralP", "pow"]
+- !private ["s25ExpressibleByFloatLiteralP", "rounded"]
+- !private ["s27ExpressibleByIntegerLiteralP", "Double"]
+- ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s27ExpressibleByIntegerLiteralP", "pi"]
+- !private ["s27ExpressibleByIntegerLiteralP", "pow"]
+- !private ["s27ExpressibleByIntegerLiteralP", "rounded"]
+- !private ["SF", "Double"]
+- ["SF", ""]
+- !private ["SF", "init"]
+- ["SF", "pi"]
+- !private ["SF", "pow"]
+- !private ["SF", "rounded"]
+- !private ["SH", "Double"]
+- ["SH", ""]
+- !private ["SH", "init"]
+- ["SH", "pi"]
+- !private ["SH", "pow"]
+- !private ["SH", "rounded"]
+- !private ["s25LosslessStringConvertibleP", "Double"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "pi"]
+- !private ["s25LosslessStringConvertibleP", "pow"]
+- !private ["s25LosslessStringConvertibleP", "rounded"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSObjectP", ""]
+- !private ["Sj", "Double"]
+- ["Sj", ""]
+- !private ["Sj", "init"]
+- ["Sj", "pi"]
+- !private ["Sj", "pow"]
+- !private ["Sj", "rounded"]
+- !private ["s10SIMDScalarP", "Double"]
+- !private ["s10SIMDScalarP", "init"]
+- ["s10SIMDScalarP", "pi"]
+- !private ["s10SIMDScalarP", "pow"]
+- !private ["s10SIMDScalarP", "rounded"]
+- !private ["s13SignedNumericP", "Double"]
+- ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "init"]
+- ["s13SignedNumericP", "pi"]
+- !private ["s13SignedNumericP", "pow"]
+- !private ["s13SignedNumericP", "rounded"]
+- !private ["Sx", "Double"]
+- ["Sx", ""]
+- !private ["Sx", "init"]
+- ["Sx", "pi"]
+- !private ["Sx", "pow"]
+- !private ["Sx", "rounded"]
+- !private ["s20TextOutputStreamableP", "Double"]
+- !private ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "pi"]
+- !private ["s20TextOutputStreamableP", "pow"]
+- !private ["s20TextOutputStreamableP", "rounded"]
+- !private ["s15_CVarArgAlignedP", "Double"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- ["s15_CVarArgAlignedP", "pi"]
+- !private ["s15_CVarArgAlignedP", "pow"]
+- !private ["s15_CVarArgAlignedP", "rounded"]
+- !private ["s22_CVarArgPassedAsDoubleP", "Double"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- ["s22_CVarArgPassedAsDoubleP", "pi"]
+- !private ["s22_CVarArgPassedAsDoubleP", "pow"]
+- !private ["s22_CVarArgPassedAsDoubleP", "rounded"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "Double"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- ["s30_CustomPlaygroundQuickLookableP", "pi"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "pow"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "rounded"]
+- ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "Double"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- ["s33_ExpressibleByBuiltinFloatLiteralP", "pi"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "pow"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "rounded"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "Double"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s35_ExpressibleByBuiltinIntegerLiteralP", "pi"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "pow"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "rounded"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "Double"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "pi"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "pow"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "rounded"]
+- !private ["s21_ObjectiveCBridgeableP", "Double"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "pi"]
+- !private ["s21_ObjectiveCBridgeableP", "pow"]
+- !private ["s21_ObjectiveCBridgeableP", "rounded"]
+depends-nominal:
+- "s18AdditiveArithmeticP"
+- "SB"
+- "s7CVarArgP"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "Sd"
+- "SE"
+- "SQ"
+- "s25ExpressibleByFloatLiteralP"
+- "s27ExpressibleByIntegerLiteralP"
+- "SF"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- !private "So8NSCodingP"
+- !private "So8NSObjectP"
+- "Sj"
+- "s10SIMDScalarP"
+- "s13SignedNumericP"
+- "Sx"
+- "s20TextOutputStreamableP"
+- "s15_CVarArgAlignedP"
+- "s22_CVarArgPassedAsDoubleP"
+- "s30_CustomPlaygroundQuickLookableP"
+- "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s33_ExpressibleByBuiltinFloatLiteralP"
+- "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/XPC.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/ObjectiveC.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Combine.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Dispatch.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Darwin.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/Foundation.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreFoundation.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/CoreGraphics.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/IOKit.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/SwiftOnoneSupport.swiftmodule/arm64e-apple-macos.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "f07a315c08a7d7018ebfd1b41925b0d8"
