@@ -1,20 +1,11 @@
 //
-//  common.swift
+//  funcs.swift
 //  ENGGEN121SOLVER
 //
-//  Created by Pradyun Setti on 5/03/21.
-//  https://github.com/breadone/ENGGEN121SOLVER
+//  Created by Pradyun Setti on 15/03/21.
+//
 
 import Foundation
-
-//<prefs>
-public var precision: Int = 2 //dp of answer, default is 2
-
-var showComponents: Bool = true //whether or not to show the force components in the final answer, default is true
-//</prefs>
-
-
-public var π = Double.pi
 
 extension Double {
     /// Rounds the double to decimal places value

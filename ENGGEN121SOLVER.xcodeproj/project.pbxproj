@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461A2A8825FF044400156CCE /* funcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461A2A8725FF044400156CCE /* funcs.swift */; };
 		4630F32125F58E5B000F4FC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32025F58E5B000F4FC0 /* main.swift */; };
 		4630F32925F58E74000F4FC0 /* momentSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32825F58E74000F4FC0 /* momentSolver.swift */; };
 		4630F32E25F58EA0000F4FC0 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32D25F58EA0000F4FC0 /* common.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		461A2A8725FF044400156CCE /* funcs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = funcs.swift; sourceTree = "<group>"; };
 		4630F31D25F58E5B000F4FC0 /* ENGGEN121SOLVER */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ENGGEN121SOLVER; sourceTree = BUILT_PRODUCTS_DIR; };
 		4630F32025F58E5B000F4FC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4630F32825F58E74000F4FC0 /* momentSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momentSolver.swift; sourceTree = "<group>"; };
@@ -44,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		461A2A8525FF042200156CCE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4630F32D25F58EA0000F4FC0 /* common.swift */,
+				461A2A8725FF044400156CCE /* funcs.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		4630F31425F58E5B000F4FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				4630F32025F58E5B000F4FC0 /* main.swift */,
-				4630F32D25F58EA0000F4FC0 /* common.swift */,
+				461A2A8525FF042200156CCE /* utils */,
 				4630F32B25F58E87000F4FC0 /* Statics */,
 			);
 			path = src;
@@ -140,6 +151,7 @@
 				4630F32125F58E5B000F4FC0 /* main.swift in Sources */,
 				466931D625FA38E1000AB9F4 /* centroidSolver.swift in Sources */,
 				4630F32E25F58EA0000F4FC0 /* common.swift in Sources */,
+				461A2A8825FF044400156CCE /* funcs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
