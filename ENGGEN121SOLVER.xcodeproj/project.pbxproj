@@ -12,6 +12,9 @@
 		4630F32925F58E74000F4FC0 /* momentSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32825F58E74000F4FC0 /* momentSolver.swift */; };
 		4630F32E25F58EA0000F4FC0 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32D25F58EA0000F4FC0 /* common.swift */; };
 		466931D625FA38E1000AB9F4 /* centroidSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466931D525FA38E1000AB9F4 /* centroidSolver.swift */; };
+		46C1F7272602BCBD00773822 /* equilibriumSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C1F7262602BCBD00773822 /* equilibriumSolver.swift */; };
+		46C6C53226058A7400D1DE48 /* unitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6C53126058A7400D1DE48 /* unitConverter.swift */; };
+		46C6C53726058A8600D1DE48 /* units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6C53626058A8600D1DE48 /* units.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +36,9 @@
 		4630F32825F58E74000F4FC0 /* momentSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momentSolver.swift; sourceTree = "<group>"; };
 		4630F32D25F58EA0000F4FC0 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		466931D525FA38E1000AB9F4 /* centroidSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centroidSolver.swift; sourceTree = "<group>"; };
+		46C1F7262602BCBD00773822 /* equilibriumSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = equilibriumSolver.swift; sourceTree = "<group>"; };
+		46C6C53126058A7400D1DE48 /* unitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unitConverter.swift; sourceTree = "<group>"; };
+		46C6C53626058A8600D1DE48 /* units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = units.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +92,19 @@
 			children = (
 				4630F32825F58E74000F4FC0 /* momentSolver.swift */,
 				466931D525FA38E1000AB9F4 /* centroidSolver.swift */,
+				46C1F7262602BCBD00773822 /* equilibriumSolver.swift */,
+				46C6C53426058A7800D1DE48 /* unitConverter */,
 			);
 			path = Statics;
+			sourceTree = "<group>";
+		};
+		46C6C53426058A7800D1DE48 /* unitConverter */ = {
+			isa = PBXGroup;
+			children = (
+				46C6C53126058A7400D1DE48 /* unitConverter.swift */,
+				46C6C53626058A8600D1DE48 /* units.swift */,
+			);
+			path = unitConverter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C6C53226058A7400D1DE48 /* unitConverter.swift in Sources */,
+				46C6C53726058A8600D1DE48 /* units.swift in Sources */,
 				4630F32925F58E74000F4FC0 /* momentSolver.swift in Sources */,
 				4630F32125F58E5B000F4FC0 /* main.swift in Sources */,
 				466931D625FA38E1000AB9F4 /* centroidSolver.swift in Sources */,
+				46C1F7272602BCBD00773822 /* equilibriumSolver.swift in Sources */,
 				4630F32E25F58EA0000F4FC0 /* common.swift in Sources */,
 				461A2A8825FF044400156CCE /* funcs.swift in Sources */,
 			);
