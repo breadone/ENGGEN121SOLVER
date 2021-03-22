@@ -10,6 +10,7 @@ import Foundation
 let options: String = """
 1. Moments
 2. Centroids
+3. Unit Converter
 """
 print("Disclaimer: this is NOT a full autosolver. you still have to do some work to use this")
 print("select which type of problem youre having, from:")
@@ -23,6 +24,8 @@ case 1:
     momentSolver()
 case 2:
     centroidSolver()
+case 3:
+    unitConverter()
 default:
     print("enter a valid selection")
 }

@@ -25,3 +25,7 @@ func input(_ question: String) -> String {
     print(question, terminator: "")
     return readLine() ?? ""
 }
+
+func foreach(_ data: String, key: NSObject) { //TODO Custom foreach
+    
+}
