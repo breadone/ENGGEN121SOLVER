@@ -16,3 +16,21 @@ var showComponents: Bool = true //whether or not to show the force components in
 
 public var π = Double.pi
 
+class Functional<T> {
+    var t: String
+    var need: T {
+        get {
+            if T.self == Int.self{
+                let re = Int(self.t)
+                return re as! T
+            } else {
+                let re = self.t
+                return re as! T
+            }
+//            fatalError()
+        }
+    }
+    init(t_: String)  {
+        t = t_
+    }
+}

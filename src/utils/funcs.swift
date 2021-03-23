@@ -7,6 +7,13 @@
 
 import Foundation
 
+func regex(input inp: String, expression x: String) {
+    let range = NSRange(location: 0, length: inp.utf16.count)
+    let regex = try! NSRegularExpression(pattern: x)
+    regex.firstMatch(in: inp, options: [], range: range)
+    
+}
+
 extension Double {
     /// Rounds the double to decimal places value
     func roundToPlaces(toPlaces places:Int) -> Double {
@@ -26,6 +33,15 @@ func input(_ question: String) -> String {
     return readLine() ?? ""
 }
 
-func foreach(_ data: String, key: NSObject) { //TODO Custom foreach
+func anyIn<T>(_ question: String) -> T { // this does not work yet lmao
+    print(question, terminator: "")
+    let re = readLine()
+    
+    let r = Functional<T>(t_: re ?? "")
+    return r.need
+    
+}
+
+func foreach<T>(_ data: String, key: T.Type) { //TODO Custom foreach
     
 }

@@ -40,15 +40,16 @@ struct Units {
         
         //distance
         unitAppend(.distance, Unit: Unit(name: "metres", abbreviation: "m", uType: .distance, bU: 1))
-        unitAppend(.distance, Unit: Unit(name: "foot", abbreviation: "ft", uType: .distance, bU: 3.28084))
+        unitAppend(.distance, Unit: Unit(name: "feet", abbreviation: "ft", uType: .distance, bU: 3.28084))
         
         //energy
         unitAppend(.energy, Unit: Unit(name: "joules", abbreviation: "J", uType: .energy, bU: 1))
         unitAppend(.energy, Unit: Unit(name: "british thermal units", abbreviation: "BTU", uType: .energy, bU: 1055.06))
+        unitAppend(.energy, Unit: Unit(name: "calories", abbreviation: "cal", uType: .energy, bU: 4.184))
     }
     
     
-    fileprivate mutating func unitAppend(_ a: unitType,Unit u: Unit) {
+    fileprivate mutating func unitAppend(_ a: unitType, Unit u: Unit) {
         switch a {
         case .mass:
             massArray.append(u)
