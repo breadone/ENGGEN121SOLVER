@@ -16,13 +16,13 @@ enum unitType { //TODO: add more of these
 struct Unit {
     let name: String
     let abbreviation: String
-    let uType: unitType
+//    let uType: unitType
     let bUValue: Float
     
-    init(name: String, abbreviation: String, uType: unitType, bU: Float) {
+    init(name: String, abbreviation: String, bU: Float) {
         self.name = name
         self.abbreviation = abbreviation
-        self.uType = uType
+//        self.uType = uType
         self.bUValue = bU
     }
     
@@ -35,17 +35,17 @@ struct Units {
     
     init() {
         //mass
-        unitAppend(.mass, Unit: Unit(name: "grams", abbreviation: "g", uType: .mass, bU: 1))
-        unitAppend(.mass, Unit: Unit(name: "pounds", abbreviation: "lb", uType: .mass, bU: 0.00220462))
+        unitAppend(.mass, Unit: Unit(name: "grams", abbreviation: "g", bU: 1))
+        unitAppend(.mass, Unit: Unit(name: "pounds", abbreviation: "lb", bU: 0.00220462))
         
         //distance
-        unitAppend(.distance, Unit: Unit(name: "metres", abbreviation: "m", uType: .distance, bU: 1))
-        unitAppend(.distance, Unit: Unit(name: "feet", abbreviation: "ft", uType: .distance, bU: 3.28084))
+        unitAppend(.distance, Unit: Unit(name: "metres", abbreviation: "m", bU: 1))
+        unitAppend(.distance, Unit: Unit(name: "feet", abbreviation: "ft", bU: 3.28084))
         
         //energy
-        unitAppend(.energy, Unit: Unit(name: "joules", abbreviation: "J", uType: .energy, bU: 1))
-        unitAppend(.energy, Unit: Unit(name: "british thermal units", abbreviation: "BTU", uType: .energy, bU: 1055.06))
-        unitAppend(.energy, Unit: Unit(name: "calories", abbreviation: "cal", uType: .energy, bU: 4.184))
+        unitAppend(.energy, Unit: Unit(name: "joules", abbreviation: "J", bU: 1))
+        unitAppend(.energy, Unit: Unit(name: "british thermal units", abbreviation: "BTU", bU: 1055.06))
+        unitAppend(.energy, Unit: Unit(name: "calories", abbreviation: "cal", bU: 4.184))
     }
     
     

@@ -44,6 +44,7 @@ func unitConverter() {
             print(units.energyArray[i].abbreviation)
         }
     }
+    
     let unitIn = input("what unit do you want to convert from: ")
     
 }
