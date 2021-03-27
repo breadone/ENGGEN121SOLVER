@@ -45,6 +45,6 @@ func unitConverter() {
         }
     }
     
-    let unitIn = input("what unit do you want to convert from: ")
+    //let unitIn = input("what unit do you want to convert from: ")
     
 }

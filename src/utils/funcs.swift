@@ -42,6 +42,30 @@ func anyIn<T>(_ question: String) -> T { // this does not work yet lmao
     
 }
 
-func foreach<T>(_ data: String, key: T.Type) { //TODO Custom foreach
+func inParse(_ str: String, type: inputType) -> Any {
+    switch type {
+    case .force:
+        var mag: Int = -1
+        var dir: Int = -1
+        if str.contains("@") {
+            let at = str.firstIndex(of: "@")!
+            mag = Int(str[...at])!
+            dir = Int(str[at...])!
+        }
+        return [mag, dir]
+    }
+
+}
+enum inputType {
+    case force
+}
+
+func cRegex(_ inp: String, key: String) throws -> Bool {
+    var flag: Bool = false
     
+    if key.contains(key) {
+        flag = true
+    }
+    
+    return flag
 }
