@@ -7,13 +7,7 @@
 
 import Foundation
 
-func regex(input inp: String, expression x: String) {
-    let range = NSRange(location: 0, length: inp.utf16.count)
-    let regex = try! NSRegularExpression(pattern: x)
-    regex.firstMatch(in: inp, options: [], range: range)
-    
-}
-
+///Extension to round to certain number of dp in a double
 extension Double {
     /// Rounds the double to decimal places value
     func roundToPlaces(toPlaces places:Int) -> Double {
@@ -22,50 +16,54 @@ extension Double {
     }
 } //source: https://stackoverflow.com/questions/27338573/rounding-a-double-value-to-x-number-of-decimal-places-in-swift
 
+///Standard output with visual seperators
 func answerOut(_ output: String) {
     print("------------")
     print(output)
     print("------------")
 }
 
+///Takes a string, then automatically gets input from user
 func input(_ question: String) -> String {
     print(question, terminator: "")
     return readLine() ?? ""
 }
 
-func anyIn<T>(_ question: String) -> T { // this does not work yet lmao
+///[broken] input method that can automatically convert to a type
+func anyIn<T>(_ question: String) -> T { // NO ERROR CHECKING if it breaks it breaks ¯\_(ツ)_/¯
     print(question, terminator: "")
     let re = readLine()
     
-    let r = Functional<T>(t_: re ?? "")
-    return r.need
-    
+    return re as! T
 }
 
+///Parser to convert a string into useful data, currently supports:\n
+///.force: "<mag>@<angle>" --> [mag, angle]
+///.XandY: <x>,<y> --> [x, y]
 func inParse(_ str: String, type: inputType) -> Any {
     switch type {
     case .force:
-        var mag: Int = -1
-        var dir: Int = -1
+        var mag: Double = -1
+        var dir: Double = -1
         if str.contains("@") {
-            let at = str.firstIndex(of: "@")!
-            mag = Int(str[...at])!
-            dir = Int(str[at...])!
+            let atSign = str.firstIndex(of: "@")! //finds position of at sign
+            mag = Double( str[...str.index(before: atSign)] ) ?? 0 //takes the substring of str from 0 to the character before @
+            dir = Double( str[str.index(after: atSign)...] ) ?? 0 //ditto above but after the @ sign to the end of the string
         }
         return [mag, dir]
+        
+    case .XandY:
+        var x: Double = -1
+        var y: Double = -1
+        let comma = str.firstIndex(of: ",")!
+        x = Double( str[...str.index(before: comma)] ) ?? 0
+        y = Double( str[str.index(after: comma)...] ) ?? 0
+        return [x, y]
     }
 
 }
 enum inputType {
     case force
+    case XandY
 }
 
-func cRegex(_ inp: String, key: String) throws -> Bool {
-    var flag: Bool = false
-    
-    if key.contains(key) {
-        flag = true
-    }
-    
-    return flag
-}

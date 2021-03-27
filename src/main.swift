@@ -20,6 +20,8 @@ print("choice: ", terminator: "")
 let choice = Int(readLine() ?? "-1")
 
 switch choice {
+case -1:
+    debugCode()
 case 1:
     momentSolver()
 case 2:
@@ -29,3 +31,10 @@ case 3:
 default:
     print("enter a valid selection")
 }
+
+#if DEBUG
+//add debug code here, input -1 to run
+fileprivate func debugCode() {
+    print(inParse("123@213", type: .force))
+}
+#endif
