@@ -55,10 +55,10 @@ public func momentSolver() {
     
     let forceCount: Int = Int(input("how many forces are there: "))!
     for i in 1...forceCount {
-        let nForce: [Double] = inParse(input("Enter force \(i), in form magnitude@angle: "), type: .force) as! [Double]
+        let nForce: [Double] = inputParse("Enter force \(i), in form magnitude@angle: ", type: .force) as! [Double]
         let newMag = nForce[0]
         let newAngle = nForce[1]
-        let nDist: [Double] = inParse(input("Enter force \(i)'s distance to the pivot in the form x,y: "), type: .XandY) as! [Double]
+        let nDist: [Double] = inputParse("Enter force \(i)'s distance to the pivot in the form x,y: ", type: .XandY) as! [Double]
         let newxDist = nDist[0]
         let newyDist = nDist[1]
         Forces.append(Force(mag: newMag, angle: newAngle, xDist: newxDist, yDist: newyDist))

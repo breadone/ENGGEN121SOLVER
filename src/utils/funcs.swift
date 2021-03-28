@@ -31,16 +31,16 @@ func input(_ question: String) -> String {
 
 ///[broken] input method that can automatically convert to a type
 func anyIn<T>(_ question: String) -> T { // NO ERROR CHECKING if it breaks it breaks ¯\_(ツ)_/¯
-    print(question, terminator: "")
+    print(question, terminator: ": ")
     let re = readLine()
-    
     return re as! T
 }
 
-///Parser to convert a string into useful data, currently supports:\n
-///.force: "<mag>@<angle>" --> [mag, angle]
-///.XandY: <x>,<y> --> [x, y]
-func inParse(_ str: String, type: inputType) -> Any {
+/**
+ * .force: "<mag>@<angle>" --> [mag, angle],
+ * .XandY: <x>,<y> --> [x, y]
+*/
+func strParse(input str: String, type: inputType) -> Any {
     switch type {
     case .force:
         var mag: Double = -1
@@ -62,6 +62,30 @@ func inParse(_ str: String, type: inputType) -> Any {
     }
 
 }
+func inputParse(_ q: String, type: inputType) -> Any {
+    let str = input(q)
+    switch type {
+    case .force:
+        var mag: Double = -1
+        var dir: Double = -1
+        if str.contains("@") {
+            let atSign = str.firstIndex(of: "@")! //finds position of at sign
+            mag = Double( str[...str.index(before: atSign)] ) ?? 0 //takes the substring of str from 0 to the character before @
+            dir = Double( str[str.index(after: atSign)...] ) ?? 0 //ditto above but after the @ sign to the end of the string
+        }
+        return [mag, dir]
+        
+    case .XandY:
+        var x: Double = -1
+        var y: Double = -1
+        let comma = str.firstIndex(of: ",")!
+        x = Double( str[...str.index(before: comma)] ) ?? 0
+        y = Double( str[str.index(after: comma)...] ) ?? 0
+        return [x, y]
+    }
+
+}
+
 enum inputType {
     case force
     case XandY

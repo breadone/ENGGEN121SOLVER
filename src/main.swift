@@ -35,6 +35,6 @@ default:
 #if DEBUG
 //add debug code here, input -1 to run
 fileprivate func debugCode() {
-    print(inParse("123@213", type: .force))
+
 }
 #endif
