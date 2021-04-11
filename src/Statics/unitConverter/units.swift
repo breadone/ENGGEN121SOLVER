@@ -14,52 +14,49 @@ enum unitType {
     case time
 }
 
-struct Unit { //defines a *type* of unit, eg a kg, a N, not a singular unit
+struct Unit { //defines a *type* of unit, eg a kg, a joule, not a singular unit with a value
+    static var all = [Unit]()
     let name: String
     let uType: unitType
     let bUValue: Double
     
-    init(uType: unitType, name n: String, bU: Double) {
+    private init(uType: unitType, name n: String, bU: Double) {
         self.name = n
         self.uType = uType
         self.bUValue = bU
     }
     
-}
-
-struct Units {
-    static var unitArray: [Unit] = [Unit]()
-    
-    init() {
-        Units.unitAppend( Unit(uType: .mass, name: "g", bU: 1) )
-        Units.unitAppend( Unit(uType: .mass, name: "kg", bU: 0.001) )
-        Units.unitAppend( Unit(uType: .mass, name: "lb", bU: 0.00220462) )
-        Units.unitAppend( Unit(uType: .mass, name: "t", bU: 0.000001) ) //metric tonne
-        Units.unitAppend( Unit(uType: .mass, name: "oz", bU: 0.035274) )
-         
-        Units.unitAppend( Unit(uType: .distance, name: "m", bU: 1) )
-        Units.unitAppend( Unit(uType: .distance, name: "km", bU: 0.001) )
-        Units.unitAppend( Unit(uType: .distance, name: "mi", bU: 0.000621371) )
-        Units.unitAppend( Unit(uType: .distance, name: "ft", bU: 3.28084) )
-        Units.unitAppend( Unit(uType: .distance, name: "yd", bU: 1.09361) )
-         
-        Units.unitAppend( Unit(uType: .energy, name: "j", bU: 1) )
-        Units.unitAppend( Unit(uType: .energy, name: "kj", bU: 0.001) )
-        Units.unitAppend( Unit(uType: .energy, name: "btu", bU: 0.000947817) )
-        Units.unitAppend( Unit(uType: .energy, name: "cal", bU: 0.2390057361) )
-        Units.unitAppend( Unit(uType: .energy, name: "kcal", bU: 0.000239006))
+    static func populateArray() {
+        addUnit(.mass, name: "g", bU: 1)
+        addUnit(.mass, name: "kg", bU: 1/1000)
+        addUnit(.mass, name: "lb", bU: 1/454)
+        addUnit(.mass, name: "t", bU: 1/1e6)  //metric tonne imagine being american lol
+        addUnit(.mass, name: "oz", bU: 1/28.35)
         
-        Units.unitAppend( Unit(uType: .time, name: "s", bU: 1) )
-        Units.unitAppend( Unit(uType: .time, name: "h", bU: 1/60) )
-        Units.unitAppend( Unit(uType: .time, name: "w", bU: 1/604800) )
-        Units.unitAppend( Unit(uType: .time, name: "d", bU: 1/86400) )
+        addUnit(.distance, name: "m", bU: 1)
+        addUnit(.distance, name: "km", bU: 1/1000)
+        addUnit(.distance, name: "mi", bU: 1/1609)
+        addUnit(.distance, name: "ft", bU: 3.28084)
+        addUnit(.distance, name: "yd", bU: 1.09361)
+        
+        addUnit(.energy, name: "j", bU: 1)
+        addUnit(.energy, name: "kj", bU: 1/1000)
+        addUnit(.energy, name: "btu", bU: 1/1055)
+        addUnit(.energy, name: "cal", bU: 1/4.184)
+        addUnit(.energy, name: "kcal", bU: 1/4184)
+        
+        addUnit(.time, name: "s", bU: 1)
+        addUnit(.time, name: "h", bU: 1/60)
+        addUnit(.time, name: "w", bU: 1/604800)
+        addUnit(.time, name: "d", bU: 1/86400)
     }
     
-    private static func unitAppend(_ u: Unit) {
-        unitArray.append(u)
+    private static func addUnit(_ type: unitType, name: String, bU: Double) {
+        let u = Unit(uType: type, name: name, bU: bU)
+        all.append(u)
     }
+    
 }
-
 
 struct singleUnit {
     public var value: Double?

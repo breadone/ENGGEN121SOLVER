@@ -8,8 +8,8 @@
 import Foundation
 
 func unitConverter() {
-    Units.init() //need this here otherwise unitArray never gets populated
-    let unitArray = Units.unitArray //array of all the units supported (see units.swift)
+    Unit.populateArray() //need this here otherwise unitArray never gets populated
+    let unitArray = Unit.all //array of all the units supported (see units.swift)
     var toConvert: singleUnit? = nil //input unit to convert
     var convertTo: singleUnit? = nil //output unit that has been converted
     
@@ -22,7 +22,7 @@ func unitConverter() {
     let convertUnits = [input[1], input[2]] //both input and output units (0 is input, 1 is output)
     
     var flag1 = false, flag2 = false
-    for i in 0...Units.unitArray.count - 1 {
+    for i in 0...unitArray.count - 1 {
         if convertUnits[0] as! String == unitArray[i].name { //loops through unitArray to see if there is a match for abbreviations
             let u = unitArray[i]
             toConvert = singleUnit(value: convertValue, name: u.name, uType: u.uType, bU: u.bUValue) //uses abbreviation to fill in the other details of the units
