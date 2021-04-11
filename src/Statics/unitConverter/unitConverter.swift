@@ -22,13 +22,13 @@ func unitConverter() {
     let convertUnits = [input[1], input[2]] //both input and output units (0 is input, 1 is output)
     
     for i in 0...Units.unitArray.count - 1{
-        if convertUnits[0] as! String == unitArray[i].abbreviation { //loops through unitArray to see if there is a match for abbreviations
+        if convertUnits[0] as! String == unitArray[i].name { //loops through unitArray to see if there is a match for abbreviations
             let u = unitArray[i]
-            toConvert = singleUnit(value: convertValue, abbr: u.abbreviation, uType: u.uType, bU: u.bUValue) //uses the abbreviation to fill in the other details of the units
+            toConvert = singleUnit(value: convertValue, name: u.name, uType: u.uType, bU: u.bUValue) //uses the abbreviation to fill in the other details of the units
         }
-        if convertUnits[1] as! String == unitArray[i].abbreviation {
+        if convertUnits[1] as! String == unitArray[i].name {
             let u = unitArray[i]
-            convertTo = singleUnit(abbr: u.abbreviation, uType: u.uType, bU: u.bUValue)
+            convertTo = singleUnit(name: u.name, uType: u.uType, bU: u.bUValue)
         }
     }
     
@@ -37,8 +37,8 @@ func unitConverter() {
         let temp = ((convertTo?.bU)! / (toConvert?.bU)!) * (toConvert?.value)! //converting math 😎
         convertTo?.value = temp
         
-        let lhs: String = "\( Double((toConvert?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (toConvert?.abbr)! )"
-        let rhs: String = "\( Double((convertTo?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (convertTo?.abbr)! )"
+        let lhs: String = "\( Double((toConvert?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (toConvert?.name)! )"
+        let rhs: String = "\( Double((convertTo?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (convertTo?.name)! )"
         answer = "\(lhs) == \(rhs)"
     } else {
         answer = "cannot convert between units of type \((toConvert?.uType)!) and \((convertTo?.uType)!)"
