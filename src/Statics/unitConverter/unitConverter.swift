@@ -18,7 +18,7 @@ func unitConverter() {
     print("")
     
     let input: [Any] = inputParse("enter what you would like to convert: ", type: .units) as! [Any] //inputs the conversion and splits it into parts
-    let convertValue = input[0] as! Float //the value to be converted
+    let convertValue = input[0] as! Double //the value to be converted
     let convertUnits = [input[1], input[2]] //both input and output units (0 is input, 1 is output)
     
     var flag1 = false, flag2 = false
@@ -45,8 +45,8 @@ func unitConverter() {
         let temp = ((convertTo?.bU)! / (toConvert?.bU)!) * (toConvert?.value)! //converting math 😎
         convertTo?.value = temp
         
-        let lhs: String = "\( Double((toConvert?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (toConvert?.name)! )"
-        let rhs: String = "\( Double((convertTo?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (convertTo?.name)! )"
+        let lhs: String = "\( ((toConvert?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (toConvert?.name)! )"
+        let rhs: String = "\( ((convertTo?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (convertTo?.name)! )"
         answer = "\(lhs) == \(rhs)"
     } else {
         answer = "cannot convert between units of type \((toConvert?.uType)!) and \((convertTo?.uType)!)"

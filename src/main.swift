@@ -12,7 +12,6 @@ let options: String = """
 2. Centroids
 3. Unit Converter
 """
-print("Disclaimer: this is NOT a full autosolver. you still have to do some work to use this")
 print("select which type of problem youre having, from:")
 print(options)
 

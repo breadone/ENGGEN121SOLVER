@@ -61,7 +61,7 @@ func inputParse(_ q: String, type: inputType) -> Any {
     case .units:
 //        var type: unitType //may do some fancy error that u cant convert between unit types later
         var expressions = [String]() //two sides of the arrow
-        var value: Float = 0 //value to convert
+        var value: Double = 0 //value to convert
         var units = [String]() //what units to use
         
         if str.contains("->") {
@@ -75,7 +75,7 @@ func inputParse(_ q: String, type: inputType) -> Any {
             let l = exp.length
             let p = (l-i)
             
-            if let v = Float(exp.dropLast(i)) {
+            if let v = Double(exp.dropLast(i)) {
                 value = v
                 units.append(exp[p..<l].lowercased())
                 break
