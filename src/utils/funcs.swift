@@ -14,7 +14,7 @@ extension Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
     }
-} //source: https://stackoverflow.com/questions/27338573/rounding-a-double-value-to-x-number-of-decimal-places-in-swift
+} //source: https://stackoverflow.com/questions/27338573
 
 ///Standard output with visual seperators
 func answerOut(_ output: String) {
@@ -67,12 +67,13 @@ func strParse(input str: String, type: inputType) -> Any {
 
 func inputParse(_ q: String, type: inputType) -> Any {
     let str = input(q)
+    
     switch type {
     case .force:
         var mag: Double = -1
         var dir: Double = -1
         if str.contains("@") {
-            let atSign = str.firstIndex(of: "@")! //finds position of at sign
+            let atSign = str.firstIndex(of: "@") ?? str.startIndex //finds position of @ sign
             mag = Double( str[...str.index(before: atSign)] ) ?? 0 //takes the substring of str from 0 to the character before @
             dir = Double( str[str.index(after: atSign)...] ) ?? 0 //ditto above but after the @ sign to the end of the string
         }
@@ -80,33 +81,45 @@ func inputParse(_ q: String, type: inputType) -> Any {
     case .XandY:
         var x: Double = -1
         var y: Double = -1
-        let comma = str.firstIndex(of: ",")!
+        let comma = str.firstIndex(of: ",") ?? str.startIndex
         x = Double( str[...str.index(before: comma)] ) ?? 0
         y = Double( str[str.index(after: comma)...] ) ?? 0
         return [x, y]
     case .units:
         var type: unitType
-        var expressions = [String]()
-        var value: Int = -1
-        var units = [String]()
+        var expressions = [String]() //two sides of the arrow
+        var value: Int = 0 //value to convert
+        var units = [String]() //what units to use
         
         if str.contains("->") {
-            let arrow = str.firstIndex(of: "-")!
+            let arrow = str.firstIndex(of: "-") ?? str.startIndex
             expressions.append(String(str[...str.index(before: arrow)] ))
             expressions.append(String( String(str[str.index(after: arrow)...] ).dropFirst() )) //not messy at all
         }
         
-        if let i = Int(expressions[0]) { //holy fucking shit this is horrendous but it does work
-            value = i
-        } else if let j = Int(expressions[0].dropLast(1)) {
-            value = j
-        } else if let k = Int(expressions[0].dropLast(2)) {
-            value = k
-        } else if let l = Int(expressions[0].dropLast(3)) {
-            value = l
+        for i in 1...4 {
+            if let v = Int(expressions[0].dropLast(i)) {
+                value = v
+                units.append(expressions[0].substring(fromIndex: i))
+                break
+            }
         }
         
-        return value as Any
+//        for i in 1...10 {
+//            let exp = String(expressions[0].dropFirst(i))
+//            let t = exp.count - 1
+//            let arr = Array(exp)
+//
+//            for j in 0...t {
+//                if arr[j].isNumber {
+//                    break
+//                }
+//            }
+//            units.append(exp)
+//        }
+        units.append(expressions[1])
+        
+        return expressions as Any
     }
 
 }
