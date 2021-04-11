@@ -59,15 +59,15 @@ func inputParse(_ q: String, type: inputType) -> Any {
         y = Double( str[str.index(after: comma)...] ) ?? 0
         return [x, y]
     case .units:
-//        var type: unitType //may do some fancy error that u cant convert between unit types later
+        let str1 = str.replacingOccurrences(of: " ", with: "")
         var expressions = [String]() //two sides of the arrow
         var value: Double = 0 //value to convert
         var units = [String]() //what units to use
         
-        if str.contains("->") {
-            let arrow = str.firstIndex(of: "-") ?? str.startIndex
-            expressions.append(String(str[...str.index(before: arrow)] ))
-            expressions.append(String( String(str[str.index(after: arrow)...] ).dropFirst() )) //yes the double string cast is needed ik messy
+        if str1.contains("->") {
+            let arrow = str1.firstIndex(of: "-") ?? str1.startIndex
+            expressions.append(String(str1[...str1.index(before: arrow)] ))
+            expressions.append(String( String(str1[str1.index(after: arrow)...] ).dropFirst() )) //yes the double string cast is needed ik messy
         }
         
         for i in 0...10 {

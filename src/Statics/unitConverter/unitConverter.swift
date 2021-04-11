@@ -14,8 +14,7 @@ func unitConverter() {
     var convertTo: singleUnit? = nil //output unit that has been converted
     
     print("unit converter for 140")
-    print("use the form '<number><unit>-><unit>', where <unit> is an abbreviation, such as kg, lb, n, etc. **Dont** have any spaces anywhere")
-    print("")
+    print("use the form '<number><unit>-><unit>', where <unit> is an abbreviation, such as kg, lb, n, etc", terminator: "\n\n")
     
     let input: [Any] = inputParse("enter what you would like to convert: ", type: .units) as! [Any] //inputs the conversion and splits it into parts
     let convertValue = input[0] as! Double //the value to be converted
