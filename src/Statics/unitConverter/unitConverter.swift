@@ -15,40 +15,24 @@ let unitList: String = """
 
 
 func unitConverter() {
-    var convertType: unitType = .distance //just to make xc shut up
-    let convertTypeInput = Int(input("\(unitList)\nwhat type of unit you want to convert: "))
-    print("use the form '<number><unit>-><unit>', where <unit> is an abbreviation, such as kg, lb, N, etc. **Dont** have any spaces anywhere")
+    Units.init()
+    let unitArray = Units.unitArray
+    let toConvert: singleUnit
     
-    let inn = inputParse("enter what you would like to convert: ", type: .units)
-    print(inn)
-    return
+    print("unit converter for 140")
+    print("use the form '<number><unit>-><unit>', where <unit> is an abbreviation, such as kg, lb, n, etc. **Dont** have any spaces anywhere")
     
-    switch convertTypeInput {
-    case 1:
-        convertType = .distance
-    case 2:
-        convertType = .mass
-    case 3:
-        convertType = .energy
-    default:
-        print("no")
+    let input: [Any] = inputParse("enter what you would like to convert: ", type: .units) as! [Any]
+    let convertValue = input[0]
+    let convertUnits = [input[1], input[2]]
+    print(convertUnits)
+    
+    for i in 0...Units.unitArray.count - 1{
+        if String(convertUnits[0] as! String) == unitArray[i].abbreviation {
+            print(unitArray[i].name)
+            break
+        }
+//        print("unit \(convertUnits[0]) not found")
     }
-    
-    switch convertType {
-    case .distance:
-        for i in 0...Units.distanceArray.count - 1 {
-            print(Units.distanceArray[i].abbreviation)
-        }
-    case .mass:
-        for i in 0...Units.massArray.count - 1 {
-            print(Units.massArray[i].abbreviation)
-        }
-    case .energy:
-        for i in 0...Units.energyArray.count - 1 {
-            print(Units.energyArray[i].abbreviation)
-        }
-    }
-    
-    //let unitIn = input("what unit do you want to convert from: ")
     
 }

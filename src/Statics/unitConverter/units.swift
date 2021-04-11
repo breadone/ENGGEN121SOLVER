@@ -29,42 +29,33 @@ struct Unit { //defines a *type* of unit, eg a kg, a N, not a singular unit
 }
 
 struct Units {
-    static var massArray = [Unit]()
-    static var distanceArray = [Unit]()
-    static var energyArray = [Unit]()
+    static var unitArray: [Unit] = [Unit]()
     
     init() {
         //mass
-        Units.unitAppend(.mass, Unit: Unit(name: "grams", abbreviation: "g", bU: 1))
-        Units.unitAppend(.mass, Unit: Unit(name: "pounds", abbreviation: "lb", bU: 0.00220462))
+        Units.unitAppend(Unit(name: "grams", abbreviation: "g", bU: 1))
+        Units.unitAppend(Unit(name: "kilogram", abbreviation: "kg", bU: 1000))
+        Units.unitAppend(Unit(name: "pounds", abbreviation: "lb", bU: 0.00220462))
         
         //distance
-        Units.unitAppend(.distance, Unit: Unit(name: "metres", abbreviation: "m", bU: 1))
-        Units.unitAppend(.distance, Unit: Unit(name: "feet", abbreviation: "ft", bU: 3.28084))
+        Units.unitAppend(Unit(name: "metres", abbreviation: "m", bU: 1))
+        Units.unitAppend(Unit(name: "feet", abbreviation: "ft", bU: 3.28084))
         
         //energy
-        Units.unitAppend(.energy, Unit: Unit(name: "joules", abbreviation: "J", bU: 1))
-        Units.unitAppend(.energy, Unit: Unit(name: "british thermal units", abbreviation: "BTU", bU: 1055.06))
-        Units.unitAppend(.energy, Unit: Unit(name: "calories", abbreviation: "cal", bU: 4.184))
+        Units.unitAppend(Unit(name: "joules", abbreviation: "J", bU: 1))
+        Units.unitAppend(Unit(name: "british thermal units", abbreviation: "btu", bU: 1055.06))
+        Units.unitAppend(Unit(name: "calories", abbreviation: "cal", bU: 4.184))
     }
     
     
-    fileprivate static func unitAppend(_ a: unitType, Unit u: Unit) {
-        switch a {
-        case .mass:
-            massArray.append(u)
-        case .distance:
-            distanceArray.append(u)
-        case .energy:
-            energyArray.append(u)
-        }
+    private static func unitAppend(_ u: Unit) {
+        unitArray.append(u)
     }
 }
 
 
 struct singleUnit {
     var value: Float
-    var type: unitType
     var abbr: String
     
 }

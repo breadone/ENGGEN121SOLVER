@@ -67,7 +67,7 @@ func strParse(input str: String, type: inputType) -> Any {
 /**
  * .force: "<mag>@<angle>" --> [mag, angle],
  * .XandY: <x>,<y> --> [x, y]
- * .units: "<number><unit>-><unit>" --> [number, [unit1, unit2]]
+ * .units: "<number><unit>-><unit>" --> [number, unit1, unit2]
 */
 func inputParse(_ q: String, type: inputType) -> Any {
     let str = input(q)
@@ -90,7 +90,7 @@ func inputParse(_ q: String, type: inputType) -> Any {
         y = Double( str[str.index(after: comma)...] ) ?? 0
         return [x, y]
     case .units:
-        var type: unitType
+//        var type: unitType //may do some fancy error that u cant convert between unit types later
         var expressions = [String]() //two sides of the arrow
         var value: Double = 0 //value to convert
         var units = [String]() //what units to use
@@ -101,19 +101,21 @@ func inputParse(_ q: String, type: inputType) -> Any {
             expressions.append(String( String(str[str.index(after: arrow)...] ).dropFirst() )) //not messy at all
         }
         
-        for i in 1...5 {
+        for i in 0...10 {
             let exp = expressions[0]
+            let l = exp.length
+            let p = (l-i)
             
             if let v = Double(exp.dropLast(i)) {
                 value = v
-                units.append(exp.substring(fromIndex: i))
+                units.append(exp[p..<l].lowercased())
                 break
             }
         }
         
-        units.append(expressions[1])
-        
-        return [value, units] as Any
+        units.append(expressions[1].lowercased())
+        print(expressions)
+        return [value, units[0], units[1]]
     }
 
 }
