@@ -34,7 +34,7 @@ struct Units {
     init() {
         //mass
         Units.unitAppend(Unit(name: "grams", abbreviation: "g", bU: 1))
-        Units.unitAppend(Unit(name: "kilogram", abbreviation: "kg", bU: 1000))
+        Units.unitAppend(Unit(name: "kilogram", abbreviation: "kg", bU: 0.001))
         Units.unitAppend(Unit(name: "pounds", abbreviation: "lb", bU: 0.00220462))
         
         //distance
@@ -42,9 +42,9 @@ struct Units {
         Units.unitAppend(Unit(name: "feet", abbreviation: "ft", bU: 3.28084))
         
         //energy
-        Units.unitAppend(Unit(name: "joules", abbreviation: "J", bU: 1))
-        Units.unitAppend(Unit(name: "british thermal units", abbreviation: "btu", bU: 1055.06))
-        Units.unitAppend(Unit(name: "calories", abbreviation: "cal", bU: 4.184))
+        Units.unitAppend(Unit(name: "joules", abbreviation: "j", bU: 1))
+        Units.unitAppend(Unit(name: "british thermal units", abbreviation: "btu", bU: 0.000947817))
+        Units.unitAppend(Unit(name: "calories", abbreviation: "cal", bU: 0.000239006))
     }
     
     
