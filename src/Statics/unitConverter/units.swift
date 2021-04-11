@@ -55,7 +55,20 @@ struct Units {
 
 
 struct singleUnit {
-    var value: Float
-    var abbr: String
+    var value: Float?
+    let abbr: String
+    let bU: Float
+    
+    init(value v: Float?, abbr a: String, bU: Float) {
+        self.value = v
+        self.abbr = a
+        self.bU = bU
+    }
+    
+    init(abbr a: String, bU: Float) {
+        self.value = nil
+        self.abbr = a
+        self.bU = bU
+    }
     
 }

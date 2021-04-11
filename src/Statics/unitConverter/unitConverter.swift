@@ -7,32 +7,28 @@
 
 import Foundation
 
-let unitList: String = """
-1. distance
-2. mass
-3. energy
-"""
-
-
 func unitConverter() {
     Units.init()
     let unitArray = Units.unitArray
-    let toConvert: singleUnit
+    var toConvert: singleUnit? = nil
+    var convertTo: singleUnit? = nil
     
     print("unit converter for 140")
     print("use the form '<number><unit>-><unit>', where <unit> is an abbreviation, such as kg, lb, n, etc. **Dont** have any spaces anywhere")
+    print("")
     
     let input: [Any] = inputParse("enter what you would like to convert: ", type: .units) as! [Any]
-    let convertValue = input[0]
+    let convertValue = input[0] as! Float
     let convertUnits = [input[1], input[2]]
-    print(convertUnits)
     
     for i in 0...Units.unitArray.count - 1{
-        if String(convertUnits[0] as! String) == unitArray[i].abbreviation {
-            print(unitArray[i].name)
-            break
+        if convertUnits[0] as! String == unitArray[i].abbreviation {
+            let u = unitArray[i]
+            toConvert = singleUnit(value: convertValue, abbr: u.abbreviation, bU: u.bUValue)
         }
-//        print("unit \(convertUnits[0]) not found")
+        if convertUnits[1] as! String == unitArray[i].abbreviation {
+            let u = unitArray[i]
+            convertTo = singleUnit(abbr: u.abbreviation, bU: u.bUValue)
+        }
     }
-    
 }

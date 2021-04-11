@@ -73,9 +73,9 @@ public func momentSolver() {
     }
     
     let output: String = """
-        ∑X: \(sumX.roundToPlaces(toPlaces: precision))
-        ∑Y: \(sumY.roundToPlaces(toPlaces: precision))
-        Total: \((sumX+sumY).roundToPlaces(toPlaces: precision))
+        ∑X: \(sumX.roundToPlaces(toPlaces: Preferences.precision))
+        ∑Y: \(sumY.roundToPlaces(toPlaces: Preferences.precision))
+        Total: \((sumX+sumY).roundToPlaces(toPlaces: Preferences.precision))
     """
     
     answerOut(output)

@@ -45,8 +45,8 @@ func centroidSolver() {
         ySum += shapes[i].yCent
     }
     
-    let xCoord = (xSum / totalArea).roundToPlaces(toPlaces: precision)
-    let yCoord = (ySum / totalArea).roundToPlaces(toPlaces: precision)
+    let xCoord = (xSum / totalArea).roundToPlaces(toPlaces: Preferences.precision)
+    let yCoord = (ySum / totalArea).roundToPlaces(toPlaces: Preferences.precision)
     
     answerOut("(\(xCoord), \(yCoord))")
 }

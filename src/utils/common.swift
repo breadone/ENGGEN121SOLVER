@@ -7,11 +7,10 @@
 
 import Foundation
 
-//<prefs>
-public var precision: Int = 2 //dp of answer, default is 2
-
-var showComponents: Bool = true //whether or not to show the force components in the final answer, default is true
-//</prefs>
+struct Preferences {
+static let precision: Int = 2 //dp of answer, default is 2
+    
+}
 
 extension Date {
     static var now: Date {
@@ -45,5 +44,5 @@ extension String {
     }
 }
 
-public var π = Double.pi
+let π = Double.pi
 

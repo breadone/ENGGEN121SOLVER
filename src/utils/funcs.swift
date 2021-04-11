@@ -7,7 +7,7 @@
 
 import Foundation
 
-///Extension to round to certain number of dp in a double
+///Round to certain number of dp
 extension Double {
     /// Rounds the double to decimal places value
     func roundToPlaces(toPlaces places:Int) -> Double {
@@ -29,46 +29,15 @@ func input(_ question: String) -> String {
     return readLine() ?? ""
 }
 
-///[broken] input method that can automatically convert to a type
-func anyIn<T>(_ question: String) -> T { // NO ERROR CHECKING if it breaks it breaks ¯\_(ツ)_/¯
-    print(question, terminator: ": ")
-    let re = readLine()
-    return re as! T
-}
-
 /**
- * .force: "<mag>@<angle>" --> [mag, angle],
- * .XandY: <x>,<y> --> [x, y]
-*/
-func strParse(input str: String, type: inputType) -> Any {
-    switch type {
-    case .force:
-        var mag: Double = -1
-        var dir: Double = -1
-        if str.contains("@") {
-            let atSign = str.firstIndex(of: "@")! //finds position of at sign
-            mag = Double( str[...str.index(before: atSign)] ) ?? 0 //takes the substring of str from 0 to the character before @
-            dir = Double( str[str.index(after: atSign)...] ) ?? 0 //ditto above but after the @ sign to the end of the string
-        }
-        return [mag, dir]
-        
-    case .XandY:
-        var x: Double = -1
-        var y: Double = -1
-        let comma = str.firstIndex(of: ",")!
-        x = Double( str[...str.index(before: comma)] ) ?? 0
-        y = Double( str[str.index(after: comma)...] ) ?? 0
-        return [x, y]
-    case .units:
-        return 0
-    }
-}
-
-/**
- * .force: "<mag>@<angle>" --> [mag, angle],
- * .XandY: <x>,<y> --> [x, y]
- * .units: "<number><unit>-><unit>" --> [number, unit1, unit2]
-*/
+ * - Parameters:
+ *   - q: the question to be outputted to the screem
+ *   - type: the type of input you are expecting
+ * - Returns:
+ *   - .force: "mag@angle" --> [mag, angle]
+ *   - .XandY: x,y --> [x, y]
+ *   - .units: "number|unit->unit" --> [number, unit1, unit2]
+ */
 func inputParse(_ q: String, type: inputType) -> Any {
     let str = input(q)
     
@@ -92,13 +61,13 @@ func inputParse(_ q: String, type: inputType) -> Any {
     case .units:
 //        var type: unitType //may do some fancy error that u cant convert between unit types later
         var expressions = [String]() //two sides of the arrow
-        var value: Double = 0 //value to convert
+        var value: Float = 0 //value to convert
         var units = [String]() //what units to use
         
         if str.contains("->") {
             let arrow = str.firstIndex(of: "-") ?? str.startIndex
             expressions.append(String(str[...str.index(before: arrow)] ))
-            expressions.append(String( String(str[str.index(after: arrow)...] ).dropFirst() )) //not messy at all
+            expressions.append(String( String(str[str.index(after: arrow)...] ).dropFirst() )) //yes the double string cast is needed ik messy
         }
         
         for i in 0...10 {
@@ -106,7 +75,7 @@ func inputParse(_ q: String, type: inputType) -> Any {
             let l = exp.length
             let p = (l-i)
             
-            if let v = Double(exp.dropLast(i)) {
+            if let v = Float(exp.dropLast(i)) {
                 value = v
                 units.append(exp[p..<l].lowercased())
                 break
@@ -114,7 +83,7 @@ func inputParse(_ q: String, type: inputType) -> Any {
         }
         
         units.append(expressions[1].lowercased())
-        print(expressions)
+        
         return [value, units[0], units[1]]
     }
 
