@@ -29,27 +29,27 @@ struct Unit {
 }
 
 struct Units {
-    var massArray = [Unit]()
-    var distanceArray = [Unit]()
-    var energyArray = [Unit]()
+    static var massArray = [Unit]()
+    static var distanceArray = [Unit]()
+    static var energyArray = [Unit]()
     
     init() {
         //mass
-        unitAppend(.mass, Unit: Unit(name: "grams", abbreviation: "g", bU: 1))
-        unitAppend(.mass, Unit: Unit(name: "pounds", abbreviation: "lb", bU: 0.00220462))
+        Units.unitAppend(.mass, Unit: Unit(name: "grams", abbreviation: "g", bU: 1))
+        Units.unitAppend(.mass, Unit: Unit(name: "pounds", abbreviation: "lb", bU: 0.00220462))
         
         //distance
-        unitAppend(.distance, Unit: Unit(name: "metres", abbreviation: "m", bU: 1))
-        unitAppend(.distance, Unit: Unit(name: "feet", abbreviation: "ft", bU: 3.28084))
+        Units.unitAppend(.distance, Unit: Unit(name: "metres", abbreviation: "m", bU: 1))
+        Units.unitAppend(.distance, Unit: Unit(name: "feet", abbreviation: "ft", bU: 3.28084))
         
         //energy
-        unitAppend(.energy, Unit: Unit(name: "joules", abbreviation: "J", bU: 1))
-        unitAppend(.energy, Unit: Unit(name: "british thermal units", abbreviation: "BTU", bU: 1055.06))
-        unitAppend(.energy, Unit: Unit(name: "calories", abbreviation: "cal", bU: 4.184))
+        Units.unitAppend(.energy, Unit: Unit(name: "joules", abbreviation: "J", bU: 1))
+        Units.unitAppend(.energy, Unit: Unit(name: "british thermal units", abbreviation: "BTU", bU: 1055.06))
+        Units.unitAppend(.energy, Unit: Unit(name: "calories", abbreviation: "cal", bU: 4.184))
     }
     
     
-    fileprivate mutating func unitAppend(_ a: unitType, Unit u: Unit) {
+    fileprivate static func unitAppend(_ a: unitType, Unit u: Unit) {
         switch a {
         case .mass:
             massArray.append(u)

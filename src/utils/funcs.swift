@@ -59,9 +59,12 @@ func strParse(input str: String, type: inputType) -> Any {
         x = Double( str[...str.index(before: comma)] ) ?? 0
         y = Double( str[str.index(after: comma)...] ) ?? 0
         return [x, y]
+    case .units:
+        return 0
     }
-
 }
+
+
 func inputParse(_ q: String, type: inputType) -> Any {
     let str = input(q)
     switch type {
@@ -74,7 +77,6 @@ func inputParse(_ q: String, type: inputType) -> Any {
             dir = Double( str[str.index(after: atSign)...] ) ?? 0 //ditto above but after the @ sign to the end of the string
         }
         return [mag, dir]
-        
     case .XandY:
         var x: Double = -1
         var y: Double = -1
@@ -82,6 +84,29 @@ func inputParse(_ q: String, type: inputType) -> Any {
         x = Double( str[...str.index(before: comma)] ) ?? 0
         y = Double( str[str.index(after: comma)...] ) ?? 0
         return [x, y]
+    case .units:
+        var type: unitType
+        var expressions = [String]()
+        var value: Int = -1
+        var units = [String]()
+        
+        if str.contains("->") {
+            let arrow = str.firstIndex(of: "-")!
+            expressions.append(String(str[...str.index(before: arrow)] ))
+            expressions.append(String( String(str[str.index(after: arrow)...] ).dropFirst() )) //not messy at all
+        }
+        
+        if let i = Int(expressions[0]) { //holy fucking shit this is horrendous but it does work
+            value = i
+        } else if let j = Int(expressions[0].dropLast(1)) {
+            value = j
+        } else if let k = Int(expressions[0].dropLast(2)) {
+            value = k
+        } else if let l = Int(expressions[0].dropLast(3)) {
+            value = l
+        }
+        
+        return value as Any
     }
 
 }
@@ -89,5 +114,6 @@ func inputParse(_ q: String, type: inputType) -> Any {
 enum inputType {
     case force
     case XandY
+    case units
 }
 

@@ -15,7 +15,6 @@ let unitList: String = """
 
 
 func unitConverter() {
-    let units = Units()
     var convertType: unitType = .distance //just to make xc shut up
     let convertTypeInput = Int(input("\(unitList)\nwhat type of unit you want to convert: "))
     
@@ -32,16 +31,16 @@ func unitConverter() {
     
     switch convertType {
     case .distance:
-        for i in 0...units.distanceArray.count - 1 {
-            print(units.distanceArray[i].abbreviation)
+        for i in 0...Units.distanceArray.count - 1 {
+            print(Units.distanceArray[i].abbreviation)
         }
     case .mass:
-        for i in 0...units.massArray.count - 1 {
-            print(units.massArray[i].abbreviation)
+        for i in 0...Units.massArray.count - 1 {
+            print(Units.massArray[i].abbreviation)
         }
     case .energy:
-        for i in 0...units.energyArray.count - 1 {
-            print(units.energyArray[i].abbreviation)
+        for i in 0...Units.energyArray.count - 1 {
+            print(Units.energyArray[i].abbreviation)
         }
     }
     

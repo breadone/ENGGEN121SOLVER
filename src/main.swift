@@ -35,6 +35,7 @@ default:
 #if DEBUG
 //add debug code here, input -1 to run
 fileprivate func debugCode() {
-
+    print(inputParse("enter units: ", type: .units))
+    
 }
 #endif
