@@ -31,4 +31,15 @@ func unitConverter() {
             convertTo = singleUnit(abbr: u.abbreviation, bU: u.bUValue)
         }
     }
+    
+    if toConvert?.bU == 1 {
+        let temp = (toConvert?.value)! * (convertTo?.bU)!
+        convertTo?.value = temp
+    } else if convertTo?.bU == 1 {
+        let temp = (toConvert?.value)! / (toConvert?.bU)!
+        convertTo?.value = temp
+    }
+    
+    let answer = "\((toConvert?.value)!)\((toConvert?.abbr)!) == \((convertTo?.value)!)\((convertTo?.abbr)!)"
+    answerOut(answer)
 }
