@@ -17,6 +17,11 @@ let unitList: String = """
 func unitConverter() {
     var convertType: unitType = .distance //just to make xc shut up
     let convertTypeInput = Int(input("\(unitList)\nwhat type of unit you want to convert: "))
+    print("use the form '<number><unit>-><unit>', where <unit> is an abbreviation, such as kg, lb, N, etc. **Dont** have any spaces anywhere")
+    
+    let inn = inputParse("enter what you would like to convert: ", type: .units)
+    print(inn)
+    return
     
     switch convertTypeInput {
     case 1:

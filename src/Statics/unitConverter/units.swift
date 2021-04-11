@@ -13,7 +13,7 @@ enum unitType { //TODO: add more of these
     case energy
 }
 
-struct Unit {
+struct Unit { //defines a *type* of unit, eg a kg, a N, not a singular unit
     let name: String
     let abbreviation: String
 //    let uType: unitType
@@ -59,6 +59,12 @@ struct Units {
             energyArray.append(u)
         }
     }
-    
+}
+
+
+struct singleUnit {
+    var value: Float
+    var type: unitType
+    var abbr: String
     
 }
