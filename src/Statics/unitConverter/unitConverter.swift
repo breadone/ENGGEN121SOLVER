@@ -21,15 +21,23 @@ func unitConverter() {
     let convertValue = input[0] as! Float //the value to be converted
     let convertUnits = [input[1], input[2]] //both input and output units (0 is input, 1 is output)
     
-    for i in 0...Units.unitArray.count - 1{
+    var flag1 = false, flag2 = false
+    for i in 0...Units.unitArray.count - 1 {
         if convertUnits[0] as! String == unitArray[i].name { //loops through unitArray to see if there is a match for abbreviations
             let u = unitArray[i]
-            toConvert = singleUnit(value: convertValue, name: u.name, uType: u.uType, bU: u.bUValue) //uses the abbreviation to fill in the other details of the units
+            toConvert = singleUnit(value: convertValue, name: u.name, uType: u.uType, bU: u.bUValue) //uses abbreviation to fill in the other details of the units
+            flag1 = true
         }
         if convertUnits[1] as! String == unitArray[i].name {
             let u = unitArray[i]
             convertTo = singleUnit(name: u.name, uType: u.uType, bU: u.bUValue)
+            flag2 = true
         }
+    }
+    
+    if flag1 == false || flag2 == false {
+        answerOut("Could not find unit, exiting")
+        return
     }
     
     let answer: String
