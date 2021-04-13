@@ -14,7 +14,7 @@ func unitConverter() {
     var convertTo: singleUnit? = nil //output unit that has been converted
     
     print("unit converter for 140")
-    print("use the form '<number><unit>-><unit>', where <unit> is an abbreviation, such as kg, lb, n, etc", terminator: "\n\n")
+    print("use the form '<number><unit> -> <unit>', where <unit> is an abbreviation, such as kg, lb, n, etc", terminator: "\n\n")
     
     let input: [Any] = inputParse("enter what you would like to convert: ", type: .units) as! [Any] //inputs the conversion and splits it into parts
     let convertValue = input[0] as! Double //the value to be converted
@@ -24,12 +24,12 @@ func unitConverter() {
     for i in 0...unitArray.count - 1 {
         if convertUnits[0] as! String == unitArray[i].name { //loops through unitArray to see if there is a match for abbreviations
             let u = unitArray[i]
-            toConvert = singleUnit(value: convertValue, name: u.name, uType: u.uType, bU: u.bUValue) //uses abbreviation to fill in the other details of the units
+            toConvert = singleUnit(value: convertValue, name: u.name, uType: u.uType, cf: u.cf) //uses abbreviation to fill in the other details of the units
             flag1 = true
         }
         if convertUnits[1] as! String == unitArray[i].name {
             let u = unitArray[i]
-            convertTo = singleUnit(name: u.name, uType: u.uType, bU: u.bUValue)
+            convertTo = singleUnit(name: u.name, uType: u.uType, cf: u.cf)
             flag2 = true
         }
     }
@@ -41,16 +41,15 @@ func unitConverter() {
     
     let answer: String
     if toConvert?.uType == convertTo?.uType {
-        let temp = ((convertTo?.bU)! / (toConvert?.bU)!) * (toConvert?.value)! //converting math 😎
+        let temp = ((convertTo?.cf)! / (toConvert?.cf)!) * (toConvert?.value)! //converting math 😎
         convertTo?.value = temp
         
         let lhs: String = "\( ((toConvert?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (toConvert?.name)! )"
         let rhs: String = "\( ((convertTo?.value)!).roundToPlaces(toPlaces: Preferences.precision) )\( (convertTo?.name)! )"
-        answer = "\(lhs) == \(rhs)"
+        answer = "\(lhs) -> \(rhs)"
     } else {
         answer = "cannot convert between units of type \((toConvert?.uType)!) and \((convertTo?.uType)!)"
     }
-    
 
     answerOut(answer)
 }

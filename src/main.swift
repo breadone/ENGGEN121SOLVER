@@ -15,27 +15,27 @@ let options: String = """
 print("Which function:")
 print(options)
 
-    
+var f = false
 repeat {
     let choice = Int(input("choice: "))
     
     switch choice {
     case -1:
         debugCode()
-        break
+        f = true
     case 1:
         momentSolver()
-        break
+        f = true
     case 2:
         centroidSolver()
-        break
+        f = true
     case 3:
         unitConverter()
-        break
+        f = true
     default:
         print("enter a valid selection")
     }
-} while true
+} while f == false
 
 #if DEBUG
 //add debug code here, input -1 to run
