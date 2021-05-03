@@ -7,17 +7,24 @@
 
 import Foundation
 
+fileprivate var board: [[String]] = {
+    let boardRow = Array(repeating: "•", count: Preferences.boardSize)
+    return Array(repeating: boardRow, count: Preferences.boardSize)
+}()
+
 func trussSolver() {
-    var board: [[String]] = {
-        let boardRow: [String] = Array(repeating: "•", count: Preferences.boardSize)
-        return Array(repeating: boardRow, count: Preferences.boardSize)
-    }()
-    
-    func changeBoardPos(_ cx: Int, _ cy: Int, type: BoardDisplay.Type) {
-        let aY: Int = (Preferences.boardSize - cy)
-        board[aY][cx - 1] = type.displayChar
-    }
-    
-    changeBoardPos(2, 1, type: joint.self)
+    createJoint([2, 1])
     print2dArray(board)
+}
+
+func createJoint(_ xy: [Int]) {
+    let x = xy.first! - 1
+    let y = Preferences.boardSize - xy.last!
+    let _ = joint(xy: [x, y], id: "\(joint.currentID)")
+    joint.currentID += 1
+    board[y][x] = joint.displayChar
+}
+
+func createMember(_ a: joint, _ b: joint) {
+    
 }
