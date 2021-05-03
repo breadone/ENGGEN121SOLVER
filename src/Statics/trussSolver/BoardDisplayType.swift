@@ -21,7 +21,7 @@ struct joint: BoardDisplay {
     var x: Int
     var y: Int
     
-    static var currentID: Int = 0
+//    static var currentID: Int = 0
     static let displayChar: String = "x"
 
     init(xy: [Int], id: String) {
@@ -62,7 +62,6 @@ struct TLBRmember: BoardDisplay {
 
 struct Hmember: BoardDisplay {
     var id: String?
-    
     var x: Int
     var y: Int
     static let displayChar: String = "-"

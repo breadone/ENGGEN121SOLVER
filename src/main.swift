@@ -11,6 +11,7 @@ let options: String = """
 1. Moment Solver
 2. Centroid Solver
 3. Unit Converter
+4. Truss Solver
 """
 print("Which function:")
 print(options)
@@ -31,6 +32,9 @@ repeat {
         f = true
     case 3:
         unitConverter()
+        f = true
+    case 4:
+        trussSolver()
         f = true
     default:
         print("enter a valid selection")
