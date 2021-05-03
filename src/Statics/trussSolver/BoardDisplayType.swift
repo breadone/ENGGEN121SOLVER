@@ -8,11 +8,11 @@
 import Foundation
 
 protocol BoardDisplay {
-    var displayChar: String { get }
+    static var displayChar: String { get }
 }
 
 struct joint: BoardDisplay {
-    let displayChar: String = "x"
+    static let displayChar: String = "x"
     enum coord: Int {
         case x
         case y
@@ -20,7 +20,7 @@ struct joint: BoardDisplay {
 }
 
 struct BLTRmember: BoardDisplay {
-    let displayChar: String = "/"
+    static let displayChar: String = "/"
     enum coord: Int {
         case x
         case y
@@ -28,7 +28,7 @@ struct BLTRmember: BoardDisplay {
 }
 
 struct TRBLmember: BoardDisplay {
-    let displayChar: String = "\\"
+    static let displayChar: String = "\\"
     enum coord: Int {
         case x
         case y
@@ -36,7 +36,7 @@ struct TRBLmember: BoardDisplay {
 }
 
 struct Hmember: BoardDisplay {
-    let displayChar: String = "-"
+    static let displayChar: String = "-"
     enum coord: Int {
         case x
         case y
@@ -44,7 +44,7 @@ struct Hmember: BoardDisplay {
 }
 
 struct Vmember: BoardDisplay {
-    let displayChar: String = "|"
+    static let displayChar: String = "|"
     enum coord: Int {
         case x
         case y
@@ -52,7 +52,7 @@ struct Vmember: BoardDisplay {
 }
 
 struct pin: BoardDisplay {
-    let displayChar: String = "∆"
+    static let displayChar: String = "∆"
     enum coord: Int {
         case x
         case y

@@ -10,5 +10,5 @@ import Foundation
 
 func differentiate() {
     let inputFunction = input("enter the function to differentiate, wrt x: ")
-    
+    print(inputFunction)
 }
