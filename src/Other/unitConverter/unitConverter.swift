@@ -22,12 +22,12 @@ func unitConverter() {
     
     var flag1 = false, flag2 = false
     for i in 0...unitArray.count - 1 {
-        if convertUnits[0] as! String == unitArray[i].name { //loops through unitArray to see if there is a match for abbreviations
+        if (convertUnits[0] as! String).lowercased() == unitArray[i].name.lowercased() { //loops through unitArray to see if there is a match for abbreviations
             let u = unitArray[i]
             toConvert = singleUnit(value: convertValue, name: u.name, uType: u.uType, cf: u.cf) //uses abbreviation to fill in the other details of the units
             flag1 = true
         }
-        if convertUnits[1] as! String == unitArray[i].name {
+        if (convertUnits[1] as! String).lowercased() == unitArray[i].name.lowercased() {
             let u = unitArray[i]
             convertTo = singleUnit(name: u.name, uType: u.uType, cf: u.cf)
             flag2 = true

@@ -67,7 +67,7 @@ func inputParse(_ q: String, type: inputType) -> Any {
         if str1.contains("->") {
             let arrow = str1.firstIndex(of: "-") ?? str1.startIndex
             expressions.append(String(str1[...str1.index(before: arrow)] ))
-            expressions.append(String( String(str1[str1.index(after: arrow)...] ).dropFirst() )) //yes the double string cast is needed ik messy
+            expressions.append(String( String(str1[str1.index(after: arrow)...] ).dropFirst() )) //yes the double string cast is needed no i dont know why
         }
         
         for i in 0...10 {
@@ -95,3 +95,8 @@ enum inputType {
     case units
 }
 
+func print2dArray(_ a: [[Any]]) {
+    for x in 0..<a.count {
+        print(a[x])
+    }
+}

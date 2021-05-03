@@ -11,7 +11,9 @@
 		4630F32125F58E5B000F4FC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32025F58E5B000F4FC0 /* main.swift */; };
 		4630F32925F58E74000F4FC0 /* momentSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32825F58E74000F4FC0 /* momentSolver.swift */; };
 		4630F32E25F58EA0000F4FC0 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630F32D25F58EA0000F4FC0 /* common.swift */; };
+		465F2A28263FD75000CE5A68 /* trussSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F2A27263FD75000CE5A68 /* trussSolver.swift */; };
 		466931D625FA38E1000AB9F4 /* centroidSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466931D525FA38E1000AB9F4 /* centroidSolver.swift */; };
+		468C50522630E826007CC92D /* differentiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468C50512630E826007CC92D /* differentiator.swift */; };
 		46C1F7272602BCBD00773822 /* equilibriumSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C1F7262602BCBD00773822 /* equilibriumSolver.swift */; };
 		46C6C53226058A7400D1DE48 /* unitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6C53126058A7400D1DE48 /* unitConverter.swift */; };
 		46C6C53726058A8600D1DE48 /* units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6C53626058A8600D1DE48 /* units.swift */; };
@@ -35,7 +37,9 @@
 		4630F32025F58E5B000F4FC0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4630F32825F58E74000F4FC0 /* momentSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = momentSolver.swift; sourceTree = "<group>"; };
 		4630F32D25F58EA0000F4FC0 /* common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
+		465F2A27263FD75000CE5A68 /* trussSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trussSolver.swift; sourceTree = "<group>"; };
 		466931D525FA38E1000AB9F4 /* centroidSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centroidSolver.swift; sourceTree = "<group>"; };
+		468C50512630E826007CC92D /* differentiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = differentiator.swift; sourceTree = "<group>"; };
 		46C1F7262602BCBD00773822 /* equilibriumSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = equilibriumSolver.swift; sourceTree = "<group>"; };
 		46C6C53126058A7400D1DE48 /* unitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unitConverter.swift; sourceTree = "<group>"; };
 		46C6C53626058A8600D1DE48 /* units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = units.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			children = (
 				4630F32025F58E5B000F4FC0 /* main.swift */,
 				461A2A8525FF042200156CCE /* utils */,
+				468C504F2630E808007CC92D /* Other */,
 				4630F32B25F58E87000F4FC0 /* Statics */,
 			);
 			path = src;
@@ -93,9 +98,26 @@
 				4630F32825F58E74000F4FC0 /* momentSolver.swift */,
 				466931D525FA38E1000AB9F4 /* centroidSolver.swift */,
 				46C1F7262602BCBD00773822 /* equilibriumSolver.swift */,
-				46C6C53426058A7800D1DE48 /* unitConverter */,
+				465F2A29263FD8E300CE5A68 /* trussSolver */,
 			);
 			path = Statics;
+			sourceTree = "<group>";
+		};
+		465F2A29263FD8E300CE5A68 /* trussSolver */ = {
+			isa = PBXGroup;
+			children = (
+				465F2A27263FD75000CE5A68 /* trussSolver.swift */,
+			);
+			path = trussSolver;
+			sourceTree = "<group>";
+		};
+		468C504F2630E808007CC92D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				46C6C53426058A7800D1DE48 /* unitConverter */,
+				468C50512630E826007CC92D /* differentiator.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		46C6C53426058A7800D1DE48 /* unitConverter */ = {
@@ -168,6 +190,8 @@
 				46C6C53726058A8600D1DE48 /* units.swift in Sources */,
 				4630F32925F58E74000F4FC0 /* momentSolver.swift in Sources */,
 				4630F32125F58E5B000F4FC0 /* main.swift in Sources */,
+				465F2A28263FD75000CE5A68 /* trussSolver.swift in Sources */,
+				468C50522630E826007CC92D /* differentiator.swift in Sources */,
 				466931D625FA38E1000AB9F4 /* centroidSolver.swift in Sources */,
 				46C1F7272602BCBD00773822 /* equilibriumSolver.swift in Sources */,
 				4630F32E25F58EA0000F4FC0 /* common.swift in Sources */,

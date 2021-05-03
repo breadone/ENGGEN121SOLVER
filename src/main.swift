@@ -40,7 +40,7 @@ repeat {
 #if DEBUG
 //add debug code here, input -1 to run
 fileprivate func debugCode() {
-    print(inputParse("what to convert: ", type: .units))
-
+//    print(inputParse("what to convert: ", type: .units))
+    trussSolver()
 }
 #endif

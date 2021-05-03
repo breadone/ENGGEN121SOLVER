@@ -27,6 +27,7 @@ struct Unit { //defines a *type* of unit, eg a kg, a joule, not a singular unit 
     }
     
     static func populateArray() {
+        //if u wanna add more just go for it, cf is the conversion factor for each "base unit" (ie whatever has cf of 1)
         addUnit(.mass, name: "g", cf: 1)
         addUnit(.mass, name: "kg", cf: 1/1000)
         addUnit(.mass, name: "lb", cf: 1/454)
@@ -34,14 +35,16 @@ struct Unit { //defines a *type* of unit, eg a kg, a joule, not a singular unit 
         addUnit(.mass, name: "oz", cf: 1/28.35)
         
         addUnit(.distance, name: "m", cf: 1)
+        addUnit(.distance, name: "cm", cf: 100)
+        addUnit(.distance, name: "mm", cf: 1000)
         addUnit(.distance, name: "km", cf: 1/1000)
         addUnit(.distance, name: "mi", cf: 1/1609)
         addUnit(.distance, name: "ft", cf: 3.28084)
         addUnit(.distance, name: "in", cf: 39.37)
         addUnit(.distance, name: "yd", cf: 1.09361)
         
-        addUnit(.energy, name: "j", cf: 1)
-        addUnit(.energy, name: "kj", cf: 1/1000)
+        addUnit(.energy, name: "J", cf: 1)
+        addUnit(.energy, name: "kJ", cf: 1/1000)
         addUnit(.energy, name: "btu", cf: 1/1055)
         addUnit(.energy, name: "cal", cf: 1/4.184)
         addUnit(.energy, name: "kcal", cf: 1/4184)
