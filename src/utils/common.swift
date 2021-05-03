@@ -8,7 +8,8 @@
 import Foundation
 
 struct Preferences {
-static let precision: Int = 2 //dp of answer, default is 2
+    static let precision: Int = 2 //dp of answer, default is 2
+    static let boardSize: Int = 7 //edge length of board in truss solver
     
 }
 

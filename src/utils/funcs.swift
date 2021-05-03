@@ -96,7 +96,12 @@ enum inputType {
 }
 
 func print2dArray(_ a: [[Any]]) {
-    for x in 0..<a.count {
-        print(a[x])
+    for x in 0 ..< a.count {
+        var line = ""
+        for y in 0 ..< a[x].count {
+            line += "\(a[x][y])"
+            line += " "
+        }
+        print(line)
     }
 }

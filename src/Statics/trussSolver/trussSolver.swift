@@ -9,17 +9,14 @@ import Foundation
 
 func trussSolver() {
     var board: [[String]] {
-        let boardRow: [String] = Array(repeating: "x", count: 5)
-        return Array(repeating: boardRow, count: 5)
+        let boardRow: [String] = Array(repeating: "•", count: Preferences.boardSize)
+        return Array(repeating: boardRow, count: Preferences.boardSize)
     }
     
-    print2dArray(board)
-}
-
-
-struct joint {
-    enum coord: Int {
-        case x, y
+    func changeBoardPos(_ cx: Int, _ cy: Int, type: BoardDisplay) {
+//        board[cx][cy] = type.displayChar
     }
     
+    
+//    print2dArray(board)
 }
