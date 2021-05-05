@@ -8,7 +8,7 @@
 import Foundation
 
 fileprivate var board: [[String]] = {
-    let boardRow = Array(repeating: "•", count: Preferences.boardSize)
+    let boardRow = Array(repeating: " ", count: Preferences.boardSize)
     return Array(repeating: boardRow, count: Preferences.boardSize)
 }()
 fileprivate var jointArray = [joint]()

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BoardDisplay {
-    var id: String? { set get }
+    var id: String? { get set }
     static var displayChar: String { get }
     var x: Int { get set }
     var y: Int { get set }
@@ -17,11 +17,7 @@ protocol BoardDisplay {
 
 struct joint: BoardDisplay {
     var id: String?
-    
-    var x: Int
-    var y: Int
-    
-//    static var currentID: Int = 0
+    var x, y: Int
     static let displayChar: String = "x"
 
     init(xy: [Int], id: String) {
@@ -33,12 +29,9 @@ struct joint: BoardDisplay {
 
 struct BLTRmember: BoardDisplay {
     var id: String?
-    
-    var x: Int
-    var y: Int
+    var x, y: Int
     static let displayChar: String = "/"
 
-    
     init(xy: [Int], id: String = "") {
         self.x = xy.first! - 1
         self.y = Preferences.boardSize - xy.last!
@@ -48,9 +41,7 @@ struct BLTRmember: BoardDisplay {
 
 struct TLBRmember: BoardDisplay {
     var id: String?
-    
-    var x: Int
-    var y: Int
+    var x, y: Int
     static let displayChar: String = "\\"
     
     init(xy: [Int], id: String = "") {
@@ -62,8 +53,7 @@ struct TLBRmember: BoardDisplay {
 
 struct Hmember: BoardDisplay {
     var id: String?
-    var x: Int
-    var y: Int
+    var x, y: Int
     static let displayChar: String = "-"
     
     init(xy: [Int], id: String = "") {
@@ -76,9 +66,7 @@ struct Hmember: BoardDisplay {
 
 struct Vmember: BoardDisplay {
     var id: String?
-    
-    var x: Int
-    var y: Int
+    var x, y: Int
     static let displayChar: String = "|"
 
     init(xy: [Int], id: String = "") {
@@ -91,9 +79,7 @@ struct Vmember: BoardDisplay {
 
 struct pin: BoardDisplay {
     var id: String?
-    
-    var x: Int
-    var y: Int
+    var x, y: Int
     static let displayChar: String = "∆"
     
     init(xy: [Int], id: String = "") {
