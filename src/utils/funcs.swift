@@ -83,8 +83,13 @@ func inputParse(_ q: String, type: inputType) -> Any {
         }
         
         units.append(expressions[1].lowercased())
-        
         return [value, units[0], units[1]]
+        
+    case .functionx:
+        var fn = function()
+        fn.addTerm(.mlt, 12.234)
+        
+        return fn
     }
 
 }
@@ -93,16 +98,16 @@ enum inputType {
     case force
     case XandY
     case units
+    case functionx
 }
 
 func print2dArray(_ a: [[Any]]) {
-    a[0].forEach() { print($0, terminator: "") }
+    for i in 0...a[0].count { print("\(i) ", terminator: "") }
     print()
     for x in 0 ..< a.count {
-        var line = "\(x + 1)"
+        var line = "\(x + 1) "
         for y in 0 ..< a[x].count {
-            line += "\(a[x][y])"
-            line += " "
+            line += "\(a[x][y]) "
         }
         print(line)
     }

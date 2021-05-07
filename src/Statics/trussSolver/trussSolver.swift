@@ -14,7 +14,7 @@ fileprivate var board: [[String]] = {
 fileprivate var jointArray = [joint]()
 
 func trussSolver() {
-    createJoint([7, 7])
+    createJoint([5, 5])
     createJoint([2, 2])
     createMember(0, 1)
     print2dArray(board)
